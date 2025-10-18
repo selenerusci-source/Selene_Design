@@ -1,0 +1,88 @@
+
+.main-content{
+    padding-top: 60px;
+    color: rgb(244, 245, 208);
+}
+
+.image-content img{
+    width: 380px ;
+    height: 480px;
+}
+
+.ability #skill-title{
+    color: rgb(244, 245, 208);
+    margin-bottom: 80px;
+    margin-top: 150px;
+}
+
+.ability #skill-container{
+    padding-top: 50px;
+}
+
+.my-progress h2{
+    color:  rgb(244, 245, 208);
+    margin-top: 200px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-book img{
+    width: 1000px;
+    height: 800px;
+    overflow: hidden;
+}
+
+
+.funfact h2{
+    color:  rgb(244, 245, 208);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.funfact-comments{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding: 50px;
+}
+
+.fact-card{
+    width: 200px;
+    margin: 10px;
+    border: 3px solid rgb(212, 156, 133);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.fact-card p{
+    color: rgb(244, 245, 208); 
+    margin-bottom: 0; 
+    font-size: 1rem;
+}
+
+@media (max-width: 768px){
+    .image-content img{
+        width: 280px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px){
+    .progress-book img{
+        width: 700px;
+        height: 500px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px){
+    .fact-card{
+        width: 300px;
+    }
+}

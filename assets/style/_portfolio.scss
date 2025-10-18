@@ -1,0 +1,50 @@
+.prt-title{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.prt-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prt-card-1{
+    margin-left: 50px;
+    margin-right: 30px;
+    width: 220px;
+    height: 370px;
+}
+
+.prt-card-2{
+    margin-right: 30px;
+    width: 220px;
+    height: 370px;
+}
+
+
+.prt-card-3{
+    margin-right: 50px;
+    width: 220px;
+    height: 370px;
+}
+
+.prt-card-1 .prt-card-2 .prt-card-3:hover{
+    width: 230px;
+    height: 388px;
+}
+
+
+@media (max-width: 768px) {
+    .prt-card-1 .prt-card-2 .prt-card-3{
+        width: 80px;
+        height: 135px;
+    }
+   
+     .prt-card-1 .prt-card-2 .prt-card-3:hover{
+        width: 90px;
+        height: 152px;
+    }
+} 
+
+

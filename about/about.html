@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il mio sito</title>
+    <meta name="description" content="Primo website creato con HTML, CSS, SASS e Bootstrap">
+    <meta property="og:title" content="About">
+    <meta property="og:description" content="about myself">
+    <meta property="og:image" content="#">
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style/style.css">  
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap" rel="stylesheet">  
+</head>  
+</head>
+
+<body>
+
+  
+    <nav class="navbar fixed-top bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Selene's website</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../cv/cv.html">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+
+    <main>
+
+        <section id="journey">
+            <div class="main-content d-flex flex-column flex-md-row justify-content-center align-items-center p-5">
+                <div class="text-content text-center text-md-start mt-5 me-md-5 order-2 order-md-1">
+                    <h1 class="about text-center text-md-start p-3 mb-5"> <strong>Who am I?</strong></h1>
+                    <p>I love exploring how to make every user experience both enjoyable and meaningful, 
+                        and I’m especially drawn to the power of storytelling.
+                    </p>
+                    <p>
+                       Art has always been a strong passion of mine—especially when it can make everyday life easier,
+                       more engaging, and more beautiful. This is why, on my journey to becoming a professional designer, 
+                       I focus deeply on accessibility and on crafting narratives that resonate.
+                    </p>
+                    <p>
+                       My mission is to design immersive experiences that help people and brands express their personality and unique message, 
+                       creating genuine connections that touch people’s hearts. 
+                    </p>
+                </div>
+                <div class="image-content d-flex justify-content-center order-1 order-md-2 me-md-5">
+                    <img src="../assets/img/about-me.svg" alt="illustrazione a mezzo busto di me" class="mt-5 pt-5 ms-lg-5 mb-lg-5">
+                </div>
+            </div>
+        </section>
+
+
+        
+        <div class="container-fluid ability">
+            <h2 class="text-center" id="skill-title">My skill set!</h2>
+            
+            <div class="ability-card-container" id="skill-container">
+                <div class="ability-card">
+                    <div class="ability-item">
+                        <img src="/assets/img/skillset-adobe.svg" alt="card skillset adobe">
+                        <p><strong>Adobe suite</strong></p>
+                        <ul>
+                            <li>llustrator</li>
+                            <li>Photoshop</li>
+                            <li>Indesign</li>
+                            <li>Afer effect</li>
+                        </ul>
+                    </div>
+                    <div class="ability-item">
+                        <img src="/assets/img/figma-skillset.svg" alt="card skill figma">
+                        <p><strong>Figma</strong></p>
+                        <ul>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>Presentation</li>
+                        </ul>
+                    </div>
+                    <div class="ability-item">
+                        <img src="/assets/img/skillset-framer.svg" alt="card framer">
+                        <p><strong>Framer</strong></p>
+                        <ul>
+                            <p>High-fidelity prototypes</p>
+                        </ul>
+                    </div>
+                    <div class="ability-item">
+                        <img src="/assets/img/skillset-zeplin.svg" alt="card zeplin">
+                        <p><strong>Zeplin</strong></p>
+                        <p>Handoff Managment</p>
+                    </div>
+                    <div class="ability-item">
+                        <img src="/assets/img/skillset-wave.svg" alt="card wave">
+                        <p><strong>WAVE</strong></p>
+                        <p>Accessibility Reserch & Optimization</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+
+        <div class="my-progress">
+            <h2>The skill I'm currently developing</h2>
+        
+            <div class="progress-book d-flex justify-content-center align-items-center">
+                    <img src="/assets/img/work-in-progress-about.svg" alt="pila di libri che tracciano i progressi">
+            </div>
+        </div>
+
+
+        <div class="funfact">
+            <h2>Fun facts about me...</h2>
+            <div class="funfact-comments justify-content-center">
+                <div class="fact-card p-4">
+                <p>I genuinely enjoy the user reserch phase.  that's where the most valuable insights emerge.</p>
+                </div>
+                <div class="fact-card p-4">
+                <p>My handwriting is pratically a secret code,  so it's safer to keep things digital!</p>
+                </div>
+                <div class="fact-card p-4">
+                <p>With headphones on, my design improve
+                     by at least 60%</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="footer-container">
+    <div class="footer-toggler">
+        <button class="btn btn-sm btn-custom-mimic" type="button" data-bs-toggle="collapse" data-bs-target="#footerCollapse" aria-expanded="false" aria-controls="footerCollapse">
+            <i class="fas fa-chevron-up collapse-toggle-icon"></i>
+        </button>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="text-center"> 
+                <h4 class="foot-ttl mb-5"><strong>Reach out</strong> if you want to find out more!</h4>
+            <div class="collapse" id="footerCollapse">
+                
+                <div class="socials d-flex justify-content-center align-items-center flex-row">
+
+                    <div>
+                        <a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">
+                        <img src="../assets/img/linkedin-icon.svg" alt="linkedin link icon" style="width: 32px; height: 32px; margin: 30px;">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/_.selene_design._/" target="_blank">
+                       <img src="../assets/img/insta-icon.svg" alt="instagram link icon"  style="width: 32px; height: 32px; margin: 30px;">
+                       </a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank">
+                        <img src="../assets/img/fb-icon.svg" alt="facebook link icon"  style="width: 32px; height: 32px; margin: 30px;">
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>

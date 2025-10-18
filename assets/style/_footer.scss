@@ -1,0 +1,49 @@
+
+
+.footer-container{
+    position: relative;
+    margin-top: 20rem;
+}
+
+/*stile footer:*/
+
+.custom-footer{
+    background-color: rgb(28, 45, 49);
+    padding-top:30px;
+    color: rgb(244, 245, 208);
+}
+
+/*posiione pulsante*/
+.footer-toggler{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+/*stile pulsante*/
+.btn-custom-mimic{
+    --bs-btn-bg: rgb(28, 45, 49);
+    --bs-btn-border-color: rgb(28, 45, 49);
+    --bs-btn-hover-color: rgb(244, 245, 208);
+    --bs-btn-hover-bg: rgb(28, 45, 49);
+    --bs-btn-hover-border-color: rgb(28, 45, 49);
+    --bs-btn-active-bg: rgb(28, 45, 49);
+    --bs-btn-active-border-color: rgb(28, 45, 49);
+    border-radius: 50px;
+    padding: .5rem 1rem;
+}
+
+/*stile icona*/
+.collapse-toggle-icon{
+    color: rgb(244, 245, 208);
+    transition: transform 0.3s ease;
+}
+
+ /*stile icona aperta*/
+ .footer-toggler button[aria-expanded="true"] 
+ .collapse-toggle-icon{
+    transform: rotate(180deg);
+    color: rgb(244, 245, 208);
+ }
