@@ -1,0 +1,320 @@
+// project buddyfy
+
+
+.project-intro{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: rgb(244, 245, 208);
+    h1{
+        font-size: 56px;
+        margin-bottom: 20px;
+        color: rgb(244, 245, 208);
+    }
+    p{
+        font-size: 28px;
+        line-height: 1.6;
+    }
+}
+
+.funfact-comments-buddy{
+    display: flex;
+    justify-content: center;
+    gap: 0; 
+    padding: 0 20px;
+    max-width: 1200px;       
+    margin: 0 auto;
+}
+.fact-card-buddy {
+    flex: 1;                  // Rende le tre card uguali in larghezza
+    border: 2px solid rgba(180, 129, 115, 100); 
+    padding: 20px;
+    text-align: left;         
+    h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: rgb(244, 245, 208); 
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(244, 245, 208, 0.8);
+    }
+}
+
+.btn-proto{
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(15, 33, 37);
+    border: 2px solid rgb(15, 33, 37);
+    border-radius: 10px;
+    background-color: rgb(212, 156, 133);
+    text-decoration: none;
+    &:hover{
+        color: rgb(212, 156, 133);
+        background-color: rgba(15, 33, 37);
+        border: 2px solid rgb(212, 156, 133);
+    }
+}
+
+.road-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra tutto il contenuto
+    background-color: rgb(15, 33, 37);
+    padding-bottom: 0;
+    color: rgb(244, 245, 208);
+    .journey-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 84px;
+        font-weight: 300;
+        margin: 40px 0 20px 0;
+        padding-bottom: 100px;
+    }
+}
+
+.road-container {
+    position: relative;
+    /* IMPORTANTE: Questo limita quanto la strada può diventare grande */
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+    padding-top: 80px; // Spazio sopra e sotto l'immagine della strada
+
+    .road-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+
+.road-step {
+    position: absolute;
+    width: 450px; // Larghezza totale del blocco
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra l'icona sopra il contenuto
+    color: rgb(244, 245, 208);
+
+    .step-icon {
+        img {
+            width: 80px; 
+            height: 80px;
+        }
+    }
+
+    .step-content {
+        display: flex;
+        align-items: flex-start; // Allinea il numero e il testo in alto
+        text-align: left;
+    }
+
+    .step-num {
+        font-family: "Zen Antique Soft", serif;
+        font-size: 70px; // Numero grande 
+        font-weight: 100;
+        line-height: 0.8;
+        padding-right: 15px;
+        padding-top: 10px;
+    }
+
+    .step-description {
+        border-left: 2px solid rgba(244, 245, 208, 0.5);// La linea verticale sottile
+        padding-left: 15px;
+        h3 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+            opacity: 0.9;
+            margin: 0;
+        }
+    }
+}
+
+.open-proto {
+    top: 30px;
+    left: -80px;
+    position: relative;
+    a {
+        font-size: 28px;
+        font-weight: 600;
+        color: rgba(244, 245, 208) !important;
+    }
+}
+
+/* POSIZIONAMENTO MANUALE */
+
+.step-1 {
+    top: 10px;       /* Regola l'altezza */
+    right: -100px;   /* Sposta a destra della strada */
+    text-align: left;
+}
+
+.step-2 {
+    top: 120px;      /* Più in basso */
+    left: -200px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-3 {
+    top: 250px;       /* Regola l'altezza */
+    right: -175px;   /* Sposta a destra della strada */
+    text-align: left;
+}
+
+.step-4 {
+    top: 380px;      /* Più in basso */
+    left: -350px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-5 {
+    top: 520px;      /* Più in basso */
+    right: -280px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-6 {
+    top: 720px;      /* Più in basso */
+    left: -350px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-7 {
+    top: 930px;      /* Più in basso */
+    right: -280px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-8 {
+    top: 1130px;      /* Più in basso */
+    left: -370px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-9 {
+    top: 1400px;      /* Più in basso */
+    right: -287px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+.step-10 {
+    top: 1730px;      /* Più in basso */
+    left: -330px;    /* Sposta a sinistra della strada */
+    text-align: right;
+}
+
+
+
+/* Stile per i modal */
+$brand-yellow: rgb(244, 245, 208); // Il tuo giallino
+
+.custom-modal-style {
+    background-color: rgb(15, 33, 37) !important; 
+    border: 1px solid rgba($brand-yellow, 0.2) !important; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative; // Necessario per posizionare la X e le frecce
+
+    .modal-body {
+        overflow: hidden; // Evita che le frecce creino scroll strano
+    }
+}
+
+// Contenitore per lo scorrimento dell'immagine lunga
+.horizontal-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity; // Effetto calamita sulle slide
+    scrollbar-width: none; // Nasconde barra su Firefox
+    
+    &::-webkit-scrollbar {
+        display: none; // Nasconde barra su Chrome/Safari
+    }
+}
+
+.modal-dialog.modal-xl {
+    max-width: 865px; // Questo numero definisce quanto è larga la tua "finestra"
+    margin: 1.75rem auto; // Centra il modal nello schermo
+    
+    @media (max-width: 992px) {
+        max-width: 90%; // Su tablet e mobile lo rendiamo responsivo
+    }
+}
+
+.long-slide-img {
+    height: 70vh; // Altezza fissa
+    width: auto;  // La larghezza si espande in base alla foto
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    scroll-snap-align: start;
+}
+
+// La X fissa personalizzata
+.btn-close-custom {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: rgba(15, 33, 37, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $brand-yellow; 
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+// Frecce di navigazione
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1050;
+    background: rgba(15, 33, 37, 0.4);
+    border: 2px solid $brand-yellow;
+    color: $brand-yellow;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: $brand-yellow;
+        color: rgb(15, 33, 37);
+    }
+    &.prev { left: 20px; }
+    &.next { right: 20px; }
+}
+
+// Effetto hover sulle icone della strada
+.step-icon {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.15); 
+        filter: brightness(1.2); 
+    }
+}
