@@ -43,6 +43,7 @@ textarea{
     margin-bottom: 100px;
     background: rgb(212, 156, 133);
     color: rgb(15, 33, 37);
+    border: 2px solid rgb(212, 156, 133);   
     font-size: 18px;
     font-weight: 600;
     border-radius: 15px;
@@ -50,7 +51,7 @@ textarea{
     &:hover{
         color: rgb(212, 156, 133);
         background-color: rgba(15, 33, 37);
-        border: 2px solid rgb(212, 156, 133);
+
     }
 }
 

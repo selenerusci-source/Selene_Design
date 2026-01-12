@@ -116,7 +116,7 @@
 }
 @media (max-width: 768px) {
   .funfact h2 {
-    padding: 10px;
+    text-align: center;
     font-size: 44px;
   }
 }
@@ -170,6 +170,7 @@ textarea {
   margin-bottom: 100px;
   background: rgb(212, 156, 133);
   color: rgb(15, 33, 37);
+  border: 2px solid rgb(212, 156, 133);
   font-size: 18px;
   font-weight: 600;
   border-radius: 15px;
@@ -178,7 +179,6 @@ textarea {
 .btn-send:hover {
   color: rgb(212, 156, 133);
   background-color: rgb(15, 33, 37);
-  border: 2px solid rgb(212, 156, 133);
 }
 
 @media (max-width: 768px) {
