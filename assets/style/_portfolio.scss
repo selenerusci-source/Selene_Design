@@ -3,49 +3,137 @@
     margin-bottom: 100px;
 }
 
-.prt-cards{
+.school-proj{
+    color:  rgb(244, 245, 208);
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 32px;
+    @media(max-width: 767px){
+        padding-bottom: 0;
+        padding-top: 30px;
+    }
+}
+
+/* --- DESKTOP --- */
+.prt-cards {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.prt-card-1{
-    margin-left: 50px;
-    margin-right: 30px;
+[class^="prt-card-"] {
+    position: relative;
+    transition: transform 0.3s ease;
     width: 220px;
     height: 370px;
-}
 
-.prt-card-2{
-    margin-right: 30px;
-    width: 220px;
-    height: 370px;
-}
-
-
-.prt-card-3{
-    margin-right: 50px;
-    width: 220px;
-    height: 370px;
-}
-
-.prt-card-1 .prt-card-2 .prt-card-3:hover{
-    width: 230px;
-    height: 388px;
-}
-
-
-@media (max-width: 768px) {
-    .prt-card-1 .prt-card-2 .prt-card-3{
-        width: 80px;
-        height: 135px;
+    &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(28, 45, 49);
+        color: rgb(244, 245, 208);
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        z-index: 999;
+        white-space: normal;
+        width: 220px;
+        text-align: center;
+        line-height: 1.4;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
     }
-   
-     .prt-card-1 .prt-card-2 .prt-card-3:hover{
-        width: 90px;
-        height: 152px;
+
+    &:hover {
+        transform: scale(1.05);
+        &::after {
+            opacity: 1;
+            visibility: visible;
+            bottom: -110px; 
+        }
     }
-} 
+}
+
+// Margini desktop
+.prt-card-1 { margin-left: 50px; margin-right: 30px; }
+.prt-card-2 { margin-right: 30px; }
+.prt-card-3 { margin-right: 50px; }
+
+
+/* --- SEZIONE MOBILE (Carosello) --- */
+// Usiamo una media query solo per definire lo stile del carosello
+
+@media (max-width: 767px) {
+    .mobile-card-container {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            width: 200px; // Ora può essere grande!
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+    }
+
+    .mobile-card-info {
+        margin-top: 25px;
+        width: 200px;
+        height: auto;
+        padding: 15px;
+        background-color: rgb(28, 45,49);
+        border-radius: 8px;
+        color: rgb(244, 245, 208) !important;
+        text-align: center;
+        overflow: visible;
+
+        h3 { 
+            font-size: 1.4rem; 
+            margin-bottom: 10px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            font-weight: bold;
+        }
+
+        p { 
+            font-size: 0.95rem; 
+            line-height: 1.5;
+            opacity: 1;
+        }
+    }
+    
+    // --- FRECCE ---
+    .carousel-control-prev, .carousel-control-next {
+        width: 15%; 
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-image: none; // Rimuozione dell'icona di Bootstrap
+        border-style: solid;
+        border-width: 3px 3px 0 0; // Creare la forma a "L"
+        width: 20px;
+        height: 20px;
+        color: rgb(244, 245, 208); 
+        display: inline-block;
+    }
+
+    .carousel-control-prev-icon {
+        transform: rotate(-135deg); // Ruota la "L" per farla puntare a sinistra
+    }
+
+    .carousel-control-next-icon {
+        transform: rotate(45deg); // Ruota la "L" per farla puntare a destra
+    }
+}
+
+
 
 
 

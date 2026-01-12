@@ -60,26 +60,79 @@
 
         <section>
             <h1 class="prt-title"><strong>My portfolio...</strong></h1>
+            <h2 class="school-proj">School Projects</h2>
 
-            <div class="prt-cards">
-                <div class="prt-card-1">
-                    <a href="./buddify-project.html" target="_blank">
-                        <img src="../assets/img/carousel-buddhify-card.svg" alt="Redesign project of Buddhify website, showing card">
+            <div class="prt-cards d-none d-md-flex">
+
+                <div class="prt-card-1" data-tooltip="UX/UI redesign of a charity website to improve course discovery, comparison and conversion.">
+                    <a href="./art-house-project.html">
+                        <img src="../assets/img/the-art-house-card (2).svg" alt="Redisign project of an Artistic charity assosetion website">
+                    </a>
+                </div>                
+
+                <div class="prt-card-2" data-tooltip="UX/UI redesign of 5 key pages, improving navigation, content hierarchy and accessibility.">
+                    <a href="./buddify-project.html">
+                        <img src="../assets/img/Buddhify-card.svg" alt="Redesign project of Buddhify website, showing card">
                     </a>
                 </div>
 
-                <div class="prt-card-2">
+                <div class="prt-card-3" data-tooltip="First UX project: redesign of a food waste reduction app. Project presentation in progress, Figma prototype available.">
                     <a href="https://www.figma.com/design/cw5uwW4PjtFTmYGGG5kIgt/Untitled?node-id=0-1&p=f&t=BeZsV05dJOeIEShQ-0" target="_blank">
                         <img src="../assets/img/carousel-lmsc-card.svg" alt="Redesign project of LMSC website, showing card">
                     </a>
                 </div>
 
-                <div class="prt-card-3">
-                    <a href="../assets/img/Progetto di Grafica di Selene Ruscica_compressed (1) (1).pdf" target="_blank">
-                        <img src="../assets/img/carousel-dna-card.svg" alt="Redesign project of LMSC website, showing card">
-                    </a>
-                </div>
             </div>
+
+            <div id="portfolioCarousel" class="carousel slide carousel-fade d-md-none" data-bs-interval="false">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="mobile-card-container">
+                            <a href="./art-house-project.html">
+                                <img src="../assets/img/the-art-house-card (2).svg" class="d-block mx-auto" alt="The Art House">
+                            </a>
+                            <div class="mobile-card-info">
+                                <h3>The Art House Project</h3>
+                                <p>UX/UI redesign of a charity website to improve course discovery, comparison and conversion.</p>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="carousel-item">
+                        <div class="mobile-card-container">
+                            <a href="./buddify-project.html">
+                                <img src="../assets/img/Buddhify-card.svg" class="d-block mx-auto" alt="Buddhify">
+                            </a>
+                            <div class="mobile-card-info">
+                                <h3>Buddhify</h3>
+                                <p>UX/UI redesign of 5 key pages, improving navigation, content hierarchy and accessibility.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="mobile-card-container">
+                            <a href="https://www.figma.com/...">
+                                <img src="../assets/img/carousel-lmsc-card.svg" class="d-block mx-auto" alt="LMSC">
+                            </a>
+                            <div class="mobile-card-info">
+                                <h3>LMSC Project</h3>
+                                <p>First UX project: redesign of a food waste reduction app. Project presentation in progress, Figma prototype available.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
         </section>
         
     </main>
