@@ -58,6 +58,12 @@
         background-color: rgba(15, 33, 37);
         border: 2px solid rgb(212, 156, 133);
     }
+    &.desktop-link{
+        display: inline-block;
+    }
+    &.mobile-link{
+        display: none;
+    }
 }
 
 .road-wrapper {
@@ -148,6 +154,12 @@
         font-size: 28px;
         font-weight: 600;
         color: rgba(244, 245, 208) !important;
+    }
+    .mobile-link{
+        display: none;
+    }
+    .desktop-link{
+        display: inline-block;
     }
 }
 
@@ -316,5 +328,151 @@ $brand-yellow: rgb(244, 245, 208); // Il tuo giallino
     &:hover {
         transform: scale(1.15); 
         filter: brightness(1.2); 
+    }
+}
+
+//funfact card
+@media (max-width: 768px) {
+.funfact-comments-buddy{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+}
+
+@media (max-width: 768px) {
+.btn-proto{
+    &.desktop-link{
+        display: none;
+    }
+    &.mobile-link{
+        display: inline-block;
+    }
+}
+}
+//mobile strada
+@media (max-width: 768px) {
+    .road-container {
+        background-image: url(../img/sentiero-mobile.svg); // L'immagine più stretta
+        background-repeat: no-repeat; // Permette alla strada di allungarsi se hai molti step
+        background-size: contain;
+        background-position: top center;
+        width: 100%;       
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 10px 100px 10px;
+        overflow: hidden;
+
+        .road-image{
+            display: none;
+        }
+    }
+}
+
+//card per step 
+
+@media (max-width: 768px) {
+    .road-step {
+        position: relative !important; // Sovrascrive i top/left del desktop
+        top: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: fit-content;
+        max-width: 80%;
+        min-width: 200px;
+        margin: 15px auto; // Le incolonna perfettamente al centro
+        background: rgba(15, 33, 37, 0.9); // Sfondo card
+        border: 2px solid rgba(244, 245, 208, 0.3);
+        border-radius: 15px;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: row !important; // Mette numero e testo affiancati
+        align-items: center;
+    // Zig-Zag sicuro (non esce dallo schermo)
+        &:nth-child(even) {
+            margin-left: auto;
+            margin-right: 5%;
+        }
+        &:nth-child(odd) {
+            margin-right: auto;
+            margin-left: 5%;
+        }
+
+        .step-num {
+            display: none;
+        }
+
+        .step-description {
+            border-left: 1px solid rgba(244, 245, 208, 0.5);
+            h3 { font-size: 22px; }
+            p { font-size: 11px; }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .step-icon {
+        width: 50px !important; 
+        height: 50px !important;
+        flex-shrink: 0; // Impedisce alla card di "schiacciare" l'icona
+        padding-right: 5px;
+        
+        
+        img {
+            width: 100% !important; // Forza l'immagine a stare nei 30px
+            height: 100% !important;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .open-proto {
+        position: relative !important;
+        top: 0 !important;   // Rimuove il top: 30px del desktop
+        left: 0 !important;  // Rimuove il left: -80px del desktop
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        a {
+            font-size: 24px; // Leggermente più piccolo per mobile per evitare che vada a capo
+            text-decoration: underline; // Opzionale: aiuta a capire che è un link
+        }
+        .desktop-link{
+            display: none;
+        }
+        .mobile-link{
+            display: inline-block !important;
+        }
+
+    }
+}
+
+//modal mobile
+
+@media (max-width: 768px) {
+    // toglie le frecce su mobile
+    .nav-arrow {
+        display: none !important;
+    }
+
+    // regola il modal per non avere spazi vuoti giganti
+    .custom-modal-style {
+        margin: 5px;
+        border-radius: 15px;
+    }
+
+    .long-slide-img {
+        height: 60vh !important; // Altezza ridotta per mobile
+        width: auto;
+    }
+
+    .horizontal-scroll-wrapper {
+        // rende lo swipe fluido su iPhone e Android
+        -webkit-overflow-scrolling: touch; 
+        padding: 0;
     }
 }

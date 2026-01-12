@@ -322,6 +322,12 @@ textarea {
   background-color: rgb(15, 33, 37);
   border: 2px solid rgb(212, 156, 133);
 }
+.btn-proto.desktop-link {
+  display: inline-block;
+}
+.btn-proto.mobile-link {
+  display: none;
+}
 
 .road-wrapper {
   display: flex;
@@ -404,6 +410,12 @@ textarea {
   font-size: 28px;
   font-weight: 600;
   color: rgb(244, 245, 208) !important;
+}
+.open-proto .mobile-link {
+  display: none;
+}
+.open-proto .desktop-link {
+  display: inline-block;
 }
 
 /* POSIZIONAMENTO MANUALE */
@@ -567,6 +579,131 @@ textarea {
   filter: brightness(1.2);
 }
 
+@media (max-width: 768px) {
+  .funfact-comments-buddy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .btn-proto.desktop-link {
+    display: none;
+  }
+  .btn-proto.mobile-link {
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  .road-container {
+    background-image: url(../img/sentiero-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px 100px 10px;
+    overflow: hidden;
+  }
+  .road-container .road-image {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .road-step {
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 80%;
+    min-width: 200px;
+    margin: 15px auto;
+    background: rgba(15, 33, 37, 0.9);
+    border: 2px solid rgba(244, 245, 208, 0.3);
+    border-radius: 15px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+  }
+  .road-step:nth-child(even) {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  .road-step:nth-child(odd) {
+    margin-right: auto;
+    margin-left: 5%;
+  }
+  .road-step .step-num {
+    display: none;
+  }
+  .road-step .step-description {
+    border-left: 1px solid rgba(244, 245, 208, 0.5);
+  }
+  .road-step .step-description h3 {
+    font-size: 22px;
+  }
+  .road-step .step-description p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .step-icon {
+    width: 50px !important;
+    height: 50px !important;
+    flex-shrink: 0;
+    padding-right: 5px;
+  }
+  .step-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 768px) {
+  .open-proto {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .open-proto a {
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  .open-proto .desktop-link {
+    display: none;
+  }
+  .open-proto .mobile-link {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 768px) {
+  .nav-arrow {
+    display: none !important;
+  }
+  .custom-modal-style {
+    margin: 5px;
+    border-radius: 15px;
+  }
+  .long-slide-img {
+    height: 60vh !important;
+    width: auto;
+  }
+  .horizontal-scroll-wrapper {
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+  }
+}
 html {
   height: 100%;
 }
