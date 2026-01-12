@@ -3,6 +3,9 @@
   padding-top: 60px;
   color: rgb(244, 245, 208);
 }
+.main-content .about {
+  font-size: 56px;
+}
 
 .image-content img {
   width: 380px;
@@ -11,8 +14,13 @@
 
 .ability #skill-title {
   color: rgb(244, 245, 208);
+  font-size: 56px;
   margin-bottom: 80px;
   margin-top: 150px;
+}
+.ability li {
+  text-align: start;
+  list-style-position: inside;
 }
 
 .ability #skill-container {
@@ -21,6 +29,8 @@
 
 .my-progress h2 {
   color: rgb(244, 245, 208);
+  padding: 10px;
+  font-size: 56px;
   margin-top: 200px;
   margin-bottom: 0;
   display: flex;
@@ -29,6 +39,7 @@
 }
 
 .progress-book img {
+  padding: 10px;
   width: 1000px;
   height: 800px;
   overflow: hidden;
@@ -36,6 +47,7 @@
 
 .funfact h2 {
   color: rgb(244, 245, 208);
+  font-size: 56px;
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
@@ -66,9 +78,33 @@
 }
 
 @media (max-width: 768px) {
+  .main-content {
+    padding: 20px 10px !important;
+  }
+  .main-content .about {
+    font-size: 44px;
+  }
+  .main-content .text-content {
+    margin: 20px !important;
+    width: 100% !important;
+    padding: 0px 15px;
+  }
+  .main-content .text-content p {
+    max-width: 100%;
+  }
   .image-content img {
     width: 280px;
     height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .ability #skill-title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 768px) {
+  .my-progress h2 {
+    font-size: 44px;
   }
 }
 @media (max-width: 768px) {
@@ -76,6 +112,11 @@
     width: 700px;
     height: 500px;
     overflow: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .funfact h2 {
+    font-size: 44px;
   }
 }
 @media (max-width: 768px) {
@@ -127,18 +168,31 @@ textarea {
 .btn-send {
   margin-bottom: 100px;
   background: rgb(212, 156, 133);
+  color: rgb(15, 33, 37);
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 15px;
   padding: 10px 25px;
-  font-size: large;
+}
+.btn-send:hover {
+  color: rgb(212, 156, 133);
+  background-color: rgb(15, 33, 37);
+  border: 2px solid rgb(212, 156, 133);
 }
 
 @media (max-width: 768px) {
+  .contact-form {
+    margin: 0 50px 0 50px;
+  }
+  .title-contacts {
+    font-size: 32px;
+  }
   input {
     width: 300px;
     height: 40px;
   }
   textarea {
-    width: 400px;
+    width: 300px;
     height: auto;
   }
 }

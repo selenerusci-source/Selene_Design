@@ -2,6 +2,9 @@
 .main-content{
     padding-top: 60px;
     color: rgb(244, 245, 208);
+    .about{
+        font-size: 56px;
+    }
 }
 
 .image-content img{
@@ -9,10 +12,17 @@
     height: 480px;
 }
 
-.ability #skill-title{
-    color: rgb(244, 245, 208);
-    margin-bottom: 80px;
-    margin-top: 150px;
+.ability {
+    #skill-title{
+        color: rgb(244, 245, 208);
+        font-size: 56px;
+        margin-bottom: 80px;
+        margin-top: 150px;
+    }
+        li{
+        text-align: start;        
+        list-style-position: inside;           
+    }
 }
 
 .ability #skill-container{
@@ -21,6 +31,8 @@
 
 .my-progress h2{
     color:  rgb(244, 245, 208);
+    padding:10px;
+    font-size: 56px;
     margin-top: 200px;
     margin-bottom: 0;
     display: flex;
@@ -29,6 +41,7 @@
 }
 
 .progress-book img{
+    padding: 10px;
     width: 1000px;
     height: 800px;
     overflow: hidden;
@@ -37,6 +50,7 @@
 
 .funfact h2{
     color:  rgb(244, 245, 208);
+    font-size: 56px;
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
@@ -67,9 +81,38 @@
 }
 
 @media (max-width: 768px){
+    .main-content{
+        padding: 20px 10px !important;
+        .about{
+            font-size: 44px;
+        }
+        .text-content {
+            margin: 20px!important; // Rimuove il margine che spinge il testo
+            width: 100% !important;     // Forza il testo a usare tutto lo spazio
+            padding: 0px 15px;            // Lascia solo un minimo di respiro dai bordi
+        
+            p {
+                max-width: 100%;        // Impedisce che il testo resti "stretto"
+            }
+        }
+    }
     .image-content img{
         width: 280px;
         height: 380px;
+    }
+}
+
+@media(max-width: 768px){
+    .ability{
+        #skill-title{
+            font-size: 44px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .my-progress h2{
+        font-size: 44px;
     }
 }
 
@@ -78,6 +121,12 @@
         width: 700px;
         height: 500px;
         overflow: hidden;
+    }
+}
+
+@media (max-width: 768px){
+    .funfact h2{
+        font-size: 44px;
     }
 }
 
