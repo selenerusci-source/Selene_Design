@@ -1,14 +1,21 @@
 .prt-title{
     margin-top: 200px;
     margin-bottom: 100px;
+    color: rgb(244, 245, 208);
+    text-align: center;
+    font-size: 84px;
+    @media (max-width: 768px){
+        font-size: 54px;
+    }
 }
 
 .school-proj{
     color:  rgb(244, 245, 208);
     text-align: center;
     padding-bottom: 50px;
-    font-size: 32px;
+    font-size: 56px;
     @media(max-width: 767px){
+        font-size: 31px;
         padding-bottom: 0;
         padding-top: 30px;
     }
@@ -132,8 +139,3 @@
         transform: rotate(45deg); // Ruota la "L" per farla puntare a destra
     }
 }
-
-
-
-
-

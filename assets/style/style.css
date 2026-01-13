@@ -142,6 +142,9 @@
 
 .title-contacts {
   margin-bottom: 50px;
+  color: rgb(244, 245, 208);
+  font-size: 56px;
+  font-weight: 300;
 }
 
 .field {
@@ -155,7 +158,7 @@
 
 label {
   color: rgb(244, 245, 208);
-  font-size: large;
+  font-size: 28px;
 }
 
 input {
@@ -173,9 +176,9 @@ textarea {
   background: rgb(212, 156, 133);
   color: rgb(15, 33, 37);
   border: 2px solid rgb(212, 156, 133);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 10px 25px;
 }
 .btn-send:hover {
@@ -188,7 +191,10 @@ textarea {
     margin: 0 50px 0 50px;
   }
   .title-contacts {
-    font-size: 32px;
+    font-size: 31px;
+  }
+  label {
+    font-size: 18px;
   }
   input {
     width: 300px;
@@ -198,20 +204,32 @@ textarea {
     width: 300px;
     height: auto;
   }
+  .btn-send {
+    padding: 5px 25px;
+  }
 }
 .prt-title {
   margin-top: 200px;
   margin-bottom: 100px;
+  color: rgb(244, 245, 208);
+  text-align: center;
+  font-size: 84px;
+}
+@media (max-width: 768px) {
+  .prt-title {
+    font-size: 54px;
+  }
 }
 
 .school-proj {
   color: rgb(244, 245, 208);
   text-align: center;
   padding-bottom: 50px;
-  font-size: 32px;
+  font-size: 56px;
 }
 @media (max-width: 767px) {
   .school-proj {
+    font-size: 31px;
     padding-bottom: 0;
     padding-top: 30px;
   }
