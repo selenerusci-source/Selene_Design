@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <base href="https://selenerusci-source.github.io/Selene_Design/">
+    <!-- <base href="https://selenerusci-source.github.io/Selene_Design/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Selene's Design</title>
@@ -61,17 +61,29 @@
 
     <main>
 
-        <header class="hero d-flex flex-column justify-content-center align-items-center min-vh-100">
-                <h1 class="text-center mb-2 order-1">Hi, I'm Selene a UI|UX Designer.</h1>
-                <div class="landing-page-btns order-2">
-                   <a href="portfolio/portfolios.html" class="landing-page-btn-2 btn">Portfolio</a>
-                   <a href="#what-i-do" class="landing-page-btn-1 btn">Find out more</a>                
+        <header class="hero container-fluid">
+    
+            <div class="hero-text-content">
+                <h1>I'm Selene.</h1>
+                <h2 class="hero-subtitle">Digital Products UX/UI designer.</h2>
+                <br>
+                <h3>User-centered digital experiences that combine <br>usability, storytelling and business goals.</h3>
+                <p class="hero-description">My design approach is grounded in strategy and research. <br>Storytelling-driven strategies and UX research guide attention, <br>usability and conversion.</p>
+                <div class="landing-page-btns">
+                    <a href="portfolio/portfolios.html" class="landing-page-btn-2 btn">My Portfolio</a>
+                    <a href="#what-i-do" class="landing-page-btn-1 btn">Find out more</a>
                 </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="assets/img/lp-cropped-mobile-new.svg" alt="Selene's illustration" class="img-fluid-mobile">
+                <img src="assets/img/lp-cropped.desktop.svg" alt="Selene Illustration" class="img-fluid-desktop">
+            </div>
+
         </header>
                 
         <div class="container-fluid ability" id="what-i-do">
             <h2 class="text-center">What am I able to do?</h2>
-            <img src="assets/img/tipa.sdraiata.svg" alt="personaggio steso" class="tipa-stesa d-flex justify-content-center align-items-center">
             
             <div class="ability-card-container">
             <div class="ability-card">
@@ -108,12 +120,35 @@
         </div>
 
 
+        <section class="more-card">
+            <p class="appr">My Design Approach</p>
+            <div class="cards-wrapper">
+                <div class="text-content-home">
+                    <h2>Understandin the problem</h2>
+                    <p>Client goals, user needs, busioness diraction</p>
+                </div>
+
+                <div class="text-content-home">
+                    <h2>Design Strategy & Optimization</h2>
+                    <p>UX Research, structure and narrative guide every design decision</p>
+                </div>
+
+                <div class="text-content-home">
+                    <h2>Itineration & Refinement</h2>
+                    <p>Testing feedback and implementation</p>
+                </div>
+            </div>
+            <p class="know-more"> Want to know more? <a href="portfolio/portfolios.html">Open portfolio!</a></p>
+        </section>
+
+
+
         <div class="last-project-container">
-            <h2>My last Project</h2>
+            <h2>Selected Project</h2>
         
             <div class="last-project d-flex justify-content-center align-items-center">
-                <a href="#">
-                    <img src="assets/img/home-last-prj.svg" alt="personaggio all'impiedi">
+                <a href="./portfolio/buddify-project.html">
+                    <img src="assets/img/the-art-house-card (2).svg" alt="personaggio all'impiedi">
                 </a>
             </div>
         </div>
@@ -122,14 +157,27 @@
         <div class="future-prj">
             <h2>Coming soon...</h2>
 
-            <div class="future-collab d-flex justify-content-center align-items-center">
+                <div class="funfact-buddy">
+        <div class="funfact-comments-buddy justify-content-center">
+            <div class="fact-card-buddy">
+                <h3>Rage</h3>
+                <p>An easy click and drag mobile game, <br>in collaboration with a full-stack developer.</p>
+            </div>
+            <div class="fact-card-buddy">
+                <h3>Photographer's Personal website</h3>
+                <p>First real attempt at a 3D design concept.</p>
+            </div>
+        </div>
+    </div>
+
+            <!-- <div class="future-collab d-flex justify-content-center align-items-center">
 
                 <img src="assets/img/collab-card-1.svg" alt="card collaborazione con developer">
 
                 <img src="assets/img/collab-card-2.svg" alt="card collaborazione futura">
 
                 <img src="assets/img/collab-card-3.svg" alt="card collaborazione futura">
-            </div>    
+            </div>     -->
         </div>
     </main>
 
