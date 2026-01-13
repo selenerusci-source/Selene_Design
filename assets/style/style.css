@@ -756,7 +756,7 @@ textarea {
   .road-container {
     background-image: url(../img/sentiero-mobile.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: top center;
     width: 100%;
     min-height: auto;

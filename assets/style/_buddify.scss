@@ -378,7 +378,7 @@ $brand-yellow: rgb(244, 245, 208); // Il tuo giallino
     .road-container {
         background-image: url(../img/sentiero-mobile.svg); // L'immagine più stretta
         background-repeat: no-repeat; // Permette alla strada di allungarsi se hai molti step
-        background-size: contain;
+        background-size: cover;
         background-position: top center;
         width: 100%;       
         min-height: auto;
