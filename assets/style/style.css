@@ -480,11 +480,13 @@ textarea {
   color: rgb(244, 245, 208);
 }
 .road-wrapper .journey-title {
-  font-family: "Montserrat", sans-serif;
   font-size: 84px;
   font-weight: 300;
   margin: 40px 0 20px 0;
   padding-bottom: 100px;
+}
+.road-wrapper .lead {
+  font-size: 28px;
 }
 
 .road-container {
@@ -721,6 +723,20 @@ textarea {
   filter: brightness(1.2);
 }
 
+@media (max-width: 768px) {
+  .project-intro h1 {
+    font-size: 44px;
+    text-align: center;
+  }
+  .project-intro h1 .lead {
+    font-size: 22px;
+    text-align: center;
+  }
+  .road-wrapper .journey-title {
+    font-size: 66px;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .funfact-comments-buddy {
     display: flex;

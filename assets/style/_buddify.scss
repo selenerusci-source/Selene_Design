@@ -74,11 +74,13 @@
     padding-bottom: 0;
     color: rgb(244, 245, 208);
     .journey-title {
-        font-family: "Montserrat", sans-serif;
         font-size: 84px;
         font-weight: 300;
         margin: 40px 0 20px 0;
         padding-bottom: 100px;
+    }
+    .lead{
+        font-size: 28px;
     }
 }
 
@@ -331,6 +333,25 @@ $brand-yellow: rgb(244, 245, 208); // Il tuo giallino
     }
 }
 
+
+
+
+@media(max-width: 768px){
+    .project-intro h1{
+        font-size: 44px;
+        text-align: center;
+        .lead {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+    
+    .road-wrapper .journey-title{
+        font-size: 66px;
+        text-align: center;
+    }
+}
+
 //funfact card
 @media (max-width: 768px) {
 .funfact-comments-buddy{
@@ -351,6 +372,8 @@ $brand-yellow: rgb(244, 245, 208); // Il tuo giallino
 }
 }
 //mobile strada
+
+
 @media (max-width: 768px) {
     .road-container {
         background-image: url(../img/sentiero-mobile.svg); // L'immagine più stretta
