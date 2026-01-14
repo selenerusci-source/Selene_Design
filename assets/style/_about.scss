@@ -7,10 +7,103 @@
     }
 }
 
-.image-content img{
-    width: 380px ;
-    height: 480px;
+
+
+
+// html, body { overflow-x: hidden; }
+// * { box-sizing: border-box; }
+
+
+
+.text-content-about{
+    width: 100%;
+    max-width: 700px;      // prova 650–750 se vuoi
+    margin-inline: auto;   // centra quando sei in colonna
+    box-shadow: 0 0 10px;
+    border: 2px solid rgb(223, 217, 180); // qui avevi scritto border-color: 2px solid...
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
 }
+
+
+.image-content img{
+    width: clamp(240px, 35vw, 380px);
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* quando sei in modalità "desktop" (da lg in su) */
+// @media (min-width: 992px) {
+//   .main-content {
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+//   /* blocco testo: non deve schiacciarsi troppo */
+//   .text-content {
+//     flex: 0 0 500px;   // larghezza "ferma" (puoi mettere 600/650/700)
+//     max-width: 640px;
+//     margin: 0;
+//   }
+
+//   /* immagine: non deve diventare minuscola */
+//   .image-content {
+//     flex: 0 0 380px;   // larghezza "ferma" coerente con la tua immagine
+//     display: flex;
+//     justify-content: center;
+//   }
+
+//   .image-content img {
+//     width: 380px;
+//     height: auto;
+//   }
+// }
+
+@media (min-width: 1200px) {
+  .main-content{
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;                 // distanza tra immagine e box testo
+  }
+
+  .text-content{
+    flex: 0 0 680px;           // LARGHEZZA STABILE del box
+    max-width: 680px;
+    margin-inline: 0;
+  }
+
+  .image-content{
+    flex: 0 0 420px;           // SPAZIO STABILE per l'immagine
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-content img{
+    width: 420px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .image-content img{
+//     width: 380px ;
+//     height: 480px;
+// }
 
 .ability {
     #skill-title{

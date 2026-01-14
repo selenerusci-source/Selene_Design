@@ -1,26 +1,50 @@
+
 .curriculum{
-    color: rgb(223, 217, 180);
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 50px;
+  color: rgb(223, 217, 180);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;      // ok: centra orizzontalmente
+  justify-content: flex-start; // <-- questa è la chiave
+  margin-bottom: 50px;
 }
+
+// .curriculum{
+//     color: rgb(223, 217, 180);
+//     padding: 50px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     margin-bottom: 50px;
+// }
 
 .curriculum h1{
     margin-top: 100px;
     margin-bottom: 50px;
 }
 .text-content {
-    padding: 20px 30px;
-    margin: 50px 350px;
-    box-shadow: 0 0 10px;
-    border-color: 2px solid rgb(223, 217, 180);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);  
-    color: rgb(223, 217, 180);
+    // padding: 20px 30px;
+    // margin: 50px 350px;
+    // box-shadow: 0 0 10px;
+    // border-color: 2px solid rgb(223, 217, 180);
+    // border-radius: 15px;
+    // backdrop-filter: blur(10px);  
+    // color: rgb(223, 217, 180);
 }
+
+.text-content-cv{
+  padding: 20px 30px;
+  margin: 30px auto;        // spazio sopra/sotto, centrato
+  width: min(720px, 100%);  // max 720px, su schermi piccoli 100%
+  box-shadow: 0 0 10px;
+  border: 2px solid rgb(223, 217, 180); // qui avevi scritto border-color: 2px solid...
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  color: rgb(223, 217, 180);
+}
+
 
 @media(max-width: 768px){
     .text-content{
