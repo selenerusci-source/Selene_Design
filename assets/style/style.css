@@ -915,6 +915,17 @@ body h3 {
   color: rgb(244, 245, 208);
 }
 
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  padding: 0.25rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
 .navbar-toggler-icon {
   background-image: url(../img/menu.hamburgher.chiuso.svg);
   background-size: contain;
@@ -926,14 +937,44 @@ body h3 {
 
 .btn-close {
   background-image: url(../img/menu.hamburgher.x.svg);
-  background-size: contain;
+  background-size: 70%;
+  width: 2rem;
+  height: 2rem;
+  padding-right: 1rem;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 1;
 }
 
 #offcanvasNavbar {
   height: 70vh;
   background-color: rgba(28, 45, 49, 0.75);
+}
+@media (max-width: 768px) {
+  #offcanvasNavbar {
+    height: 100%;
+  }
+}
+
+.desktop-nav .nav-link {
+  color: rgb(244, 245, 208);
+  font-weight: 500;
+  position: relative;
+}
+
+.desktop-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(180, 129, 115);
+  transition: width 0.3s ease;
+}
+
+.desktop-nav .nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-link {

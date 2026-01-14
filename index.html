@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <base href="https://selenerusci-source.github.io/Selene_Design/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Selene's Design</title>
@@ -28,17 +27,40 @@
     <nav class="navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Selene's website</a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+
+
+            <ul class="navbar-nav desktop-nav ms-auto d-none d-md-flex flex-row gap-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cv/cv.html">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio/portfolios.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatti/contacts.html">Contacts</a>
+                </li>
+            </ul>
+
+
+
+            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about/about.html">About</a>
@@ -147,8 +169,8 @@
             <h2>Selected Project</h2>
         
             <div class="last-project d-flex justify-content-center align-items-center">
-                <a href="./portfolio/buddify-project.html">
-                    <img src="assets/img/the-art-house-card (2).svg" alt="personaggio all'impiedi">
+                <a href="./portfolio/art-house-project.html">
+                    <img src="assets/img/selected-card.svg" alt="personaggio all'impiedi">
                 </a>
             </div>
         </div>
@@ -170,14 +192,6 @@
         </div>
     </div>
 
-            <!-- <div class="future-collab d-flex justify-content-center align-items-center">
-
-                <img src="assets/img/collab-card-1.svg" alt="card collaborazione con developer">
-
-                <img src="assets/img/collab-card-2.svg" alt="card collaborazione futura">
-
-                <img src="assets/img/collab-card-3.svg" alt="card collaborazione futura">
-            </div>     -->
         </div>
     </main>
 
