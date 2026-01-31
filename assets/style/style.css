@@ -938,7 +938,7 @@ textarea {
   }
 }
 #inP-title {
-  font-size: 66px;
+  font-size: 84px;
   padding-top: 100px;
 }
 @media (max-width: 768px) {
@@ -1024,11 +1024,6 @@ textarea {
     transform: translateY(10px);
   }
 }
-@media (max-width: 768px) {
-  .road-wrapper #road-container-inP {
-    background-image: url(../img/road.construction_1.svg);
-  }
-}
 .road-wrapper-inP {
   display: flex;
   flex-direction: column;
@@ -1042,6 +1037,11 @@ textarea {
   font-weight: 300;
   margin: 40px 0 20px 0;
   padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .road-wrapper-inP .journey-title-inP {
+    font-size: 54px;
+  }
 }
 
 .road-container-inP {
