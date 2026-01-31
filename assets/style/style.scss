@@ -5,6 +5,7 @@
 @import "cv";
 @import "footer";
 @import "buddify";
+@import "inProgress";
 
 
 html{
@@ -494,5 +495,11 @@ body h3{
         max-width: 130px;
         display: block;
         margin-inline: auto;
+    }
+}
+
+@media (max-width: 768px){
+    br{
+        display: none;
     }
 }
