@@ -14,8 +14,7 @@
   box-shadow: 0 0 10px;
   border: 2px solid rgb(223, 217, 180);
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 20px;
 }
 
@@ -275,8 +274,11 @@ textarea {
 /* --- DESKTOP --- */
 .prt-cards {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 [class^=prt-card-] {
@@ -284,6 +286,13 @@ textarea {
   transition: transform 0.3s ease;
   width: 220px;
   height: 370px;
+  flex-shrink: 0;
+}
+[class^=prt-card-] img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 [class^=prt-card-]::after {
   content: attr(data-tooltip);
@@ -313,19 +322,6 @@ textarea {
   opacity: 1;
   visibility: visible;
   bottom: -110px;
-}
-
-.prt-card-1 {
-  margin-left: 50px;
-  margin-right: 30px;
-}
-
-.prt-card-2 {
-  margin-right: 30px;
-}
-
-.prt-card-3 {
-  margin-right: 50px;
 }
 
 /* --- SEZIONE MOBILE (Carosello) --- */
@@ -406,8 +402,7 @@ textarea {
   box-shadow: 0 0 10px;
   border: 2px solid rgb(223, 217, 180);
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: rgb(223, 217, 180);
 }
 
@@ -975,8 +970,7 @@ textarea {
   box-shadow: 0 0 10px;
   border-color: 2px solid rgb(223, 217, 180);
   border-radius: 30%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .more-card-inP h2 {
   font-size: 28px;
@@ -1167,12 +1161,14 @@ body h3 {
   margin-top: 30px;
   font-size: 14px;
   padding: 10px 0;
-  /* STILE DEI BOTTONI - Sostituisce la parte che avevi commentato */
 }
 @media (min-width: 768px) {
   .landing-page-btns {
     justify-content: flex-start;
   }
+}
+.landing-page-btns {
+  /* STILE DEI BOTTONI - Sostituisce la parte che avevi commentato */
 }
 .landing-page-btns .landing-page-btn-1 {
   font-size: 16px;
@@ -1217,7 +1213,6 @@ body h3 {
   padding: 100px 20px 40px 20px;
   gap: 30px;
   color: rgb(244, 245, 208);
-  /* MEDIA QUERY DESKTOP CORRETTA */
 }
 .hero .hero-text-content {
   order: 2;
@@ -1255,6 +1250,9 @@ body h3 {
 }
 .hero .hero-image-container .img-fluid-desktop {
   display: none;
+}
+.hero {
+  /* MEDIA QUERY DESKTOP CORRETTA */
 }
 @media (min-width: 768px) {
   .hero {
@@ -1400,8 +1398,7 @@ body h3 {
   box-shadow: 0 0 10px;
   border-color: 2px solid rgb(223, 217, 180);
   border-radius: 15px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .more-card h2 {
   font-size: 28px;
