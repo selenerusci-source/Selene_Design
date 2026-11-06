@@ -364,6 +364,7 @@
         margin: 1rem 0 -45%;
         overflow: hidden;
 
+
         .flow-paint {
             position: absolute;
             top: 0;
@@ -375,7 +376,7 @@
             z-index: 5; // Vernice in primo piano rispetto alle card per dare l'effetto "sotto il liquido"
             pointer-events: none;
         }
-
+ 
         // Finestre ristrette e ben centrate per rispettare i margini interni della vernice in mobile
         .flow-craft { 
             top: 10.5%;   

@@ -891,7 +891,7 @@
     --wt: calc(20px + var(--sw) * 0.46);
     --wh: calc(var(--sw) * 8.057);
     max-width: 560px;
-    min-height: calc(var(--wt) + var(--wh) + 4rem);
+    min-height: calc(var(--wt) + var(--wh) + 2rem);
   }
   .about-hero {
     display: flex;
@@ -975,19 +975,19 @@
     margin-bottom: 0.5rem;
   }
   .behind {
-    top: calc(var(--wt) + var(--wh) * 0.22);
+    top: calc(var(--wt) + var(--wh) * 0.24);
     height: auto;
     left: 20%;
     right: 10%;
   }
   .side-quests {
-    top: calc(var(--wt) + var(--wh) * 0.45);
+    top: calc(var(--wt) + var(--wh) * 0.5);
     height: auto;
     left: 8%;
     right: 15%;
   }
   .fun-facts {
-    top: calc(var(--wt) + var(--wh) * 0.64);
+    top: calc(var(--wt) + var(--wh) * 0.78);
     height: auto;
     left: 15%;
     right: 6%;
@@ -1038,8 +1038,8 @@
     line-height: 1.45;
   }
   #footer-about {
-    margin-top: -50rem !important;
-    padding-bottom: 0;
+    margin-top: -10rem !important;
+    padding-bottom: 2rem;
   }
 }
 .contact-page {

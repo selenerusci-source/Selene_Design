@@ -245,7 +245,8 @@
         --wt: calc(20px + var(--sw) * 0.46);              // dove parte il filo: i gomitoli stanno accanto al gatto
         --wh: calc(var(--sw) * 8.057);                      // altezza del filo
         max-width: 560px;
-        min-height: calc(var(--wt) + var(--wh) + 4rem);
+        // min-height: calc(var(--wt) + var(--wh) + 4rem);
+        min-height: calc(var(--wt) + var(--wh) + 2rem);
     }
 
     .about-hero {
@@ -332,9 +333,17 @@
 
     // percentuali = posizione lungo il filo (0% = gomitoli, 100% = fine)
    
-    .behind      { top: calc(var(--wt) + var(--wh) * 0.22); height: auto; left: 20%; right: 10%; }
-    .side-quests { top: calc(var(--wt) + var(--wh) * 0.45); height: auto; left: 8%;  right: 15%; }
-    .fun-facts   { top: calc(var(--wt) + var(--wh) * 0.64); height: auto; left: 15%;  right: 6%; }
+    // .behind      { top: calc(var(--wt) + var(--wh) * 0.22); height: auto; left: 20%; right: 10%; }
+    // .side-quests { top: calc(var(--wt) + var(--wh) * 0.45); height: auto; left: 8%;  right: 15%; }
+    // .fun-facts   { top: calc(var(--wt) + var(--wh) * 0.64); height: auto; left: 15%;  right: 6%; }
+
+
+    // percentuali = posizione lungo il filo (0% = gomitoli, 100% = fine)
+    .behind      { top: calc(var(--wt) + var(--wh) * 0.24); height: auto; left: 20%; right: 10%; }
+    .side-quests { top: calc(var(--wt) + var(--wh) * 0.50); height: auto; left: 8%;  right: 15%; }
+    .fun-facts   { top: calc(var(--wt) + var(--wh) * 0.78); height: auto; left: 15%;  right: 6%; }
+
+
 
     .behind-card .behind-text {
         padding: clamp(1.2rem, 3.5cqw, 2.5rem) clamp(1rem, 4cqw, 3.6rem); // Aumenta il respiro sopra e sotto
@@ -390,8 +399,13 @@
         }
     }
 
+    // #footer-about {
+    //     margin-top: -50rem !important; // Riporta su il footer agganciandolo meglio ai flussi di vernice/filo
+    //     padding-bottom: 0;
+    // }
+
     #footer-about {
-        margin-top: -50rem !important; // Riporta su il footer agganciandolo meglio ai flussi di vernice/filo
-        padding-bottom: 0;
+        margin-top: -10rem !important; // Riducono il sovrapposamento da -50rem a un valore più naturale
+        padding-bottom: 2rem;
     }
 }
