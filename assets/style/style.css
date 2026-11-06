@@ -918,7 +918,7 @@
   }
   .about-hero .about-copy {
     max-width: none;
-    padding: 5% 10% 0 0;
+    padding: 1% 10% 0 0;
   }
   .about-hero .about-copy h1 {
     font-size: 73px;
@@ -975,13 +975,13 @@
     margin-bottom: 0.5rem;
   }
   .behind {
-    top: calc(var(--wt) + var(--wh) * 0.24);
+    top: calc(var(--wt) + var(--wh) * 0.21);
     height: auto;
     left: 20%;
     right: 10%;
   }
   .side-quests {
-    top: calc(var(--wt) + var(--wh) * 0.5);
+    top: calc(var(--wt) + var(--wh) * 0.52);
     height: auto;
     left: 8%;
     right: 15%;
@@ -1038,7 +1038,7 @@
     line-height: 1.45;
   }
   #footer-about {
-    margin-top: -10rem !important;
+    margin-top: -5rem !important;
     padding-bottom: 2rem;
   }
 }
