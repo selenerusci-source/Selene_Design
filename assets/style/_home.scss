@@ -364,7 +364,7 @@
         margin: 1rem 0 -45%;
         overflow: hidden;
 
-
+        
         .flow-paint {
             position: absolute;
             top: 0;
@@ -467,7 +467,7 @@
         width: 100%;
         max-width: 100%;
         margin: 0;
-        margin-bottom: 20px; // Spazio corretto tra l'ultimo box e il link finale
+        margin-bottom: 10px; // Spazio corretto tra l'ultimo box e il link finale
         padding: 0;
         grid-template-columns: none; // Annulla la griglia desktop
     }
@@ -563,7 +563,7 @@
 
 
     #footer-home {
-        margin-top: -45rem !important; 
+        margin-top: -30rem !important; 
         padding-bottom: 0;
     }
 

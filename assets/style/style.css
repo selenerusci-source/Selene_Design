@@ -562,7 +562,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0;
     grid-template-columns: none;
   }
@@ -647,7 +647,7 @@
     font-size: 16px;
   }
   #footer-home {
-    margin-top: -45rem !important;
+    margin-top: -30rem !important;
     padding-bottom: 0;
   }
 }
@@ -921,9 +921,9 @@
     padding: 1% 10% 0 0;
   }
   .about-hero .about-copy h1 {
-    font-size: 73px;
+    font-size: 70px;
     text-align: left;
-    margin-bottom: 30;
+    margin-bottom: 5px;
     margin-top: 0;
   }
   .about-hero .about-copy p {
@@ -975,7 +975,7 @@
     margin-bottom: 0.5rem;
   }
   .behind {
-    top: calc(var(--wt) + var(--wh) * 0.21);
+    top: calc(var(--wt) + var(--wh) * 0.23);
     height: auto;
     left: 20%;
     right: 10%;
@@ -983,8 +983,8 @@
   .side-quests {
     top: calc(var(--wt) + var(--wh) * 0.52);
     height: auto;
-    left: 8%;
-    right: 15%;
+    left: 15%;
+    right: 18%;
   }
   .fun-facts {
     top: calc(var(--wt) + var(--wh) * 0.78);
