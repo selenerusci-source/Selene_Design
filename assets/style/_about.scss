@@ -268,14 +268,14 @@
                 display: block;
                 width: 70%;
                 height: auto;
-                margin-top: 50px; // sposta il gatto verso l'alto, per allinearlo al filo
+                margin-top: 30px; // sposta il gatto verso l'alto, per allinearlo al filo
                 margin-left: -1%; // sposta il gatto verso sinistra, per allinearlo al filo
             }
         }
 
         .about-copy {
             max-width: none;
-            padding: 1% 10% 0 0; // lascia libero il tratto verticale del filo a destra
+            padding: 0 10% 0 0; // lascia libero il tratto verticale del filo a destra
 
             h1 {
                 font-size: 70px;
@@ -339,7 +339,7 @@
 
 
     // percentuali = posizione lungo il filo (0% = gomitoli, 100% = fine)
-    .behind      { top: calc(var(--wt) + var(--wh) * 0.22); height: auto; left: 20%; right: 10%; }
+    .behind      { top: calc(var(--wt) + var(--wh) * 0.23); height: auto; left: 20%; right: 10%; }
     .side-quests { top: calc(var(--wt) + var(--wh) * 0.52); height: auto; left: 15%;  right: 18%; }
     .fun-facts   { top: calc(var(--wt) + var(--wh) * 0.78); height: auto; left: 15%;  right: 6%; }
 
