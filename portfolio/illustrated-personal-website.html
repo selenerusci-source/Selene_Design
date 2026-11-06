@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selene's Design</title>
-    <meta name="description" content="first website created with HTML, CSS, SASS and Bootstrap">
+    <title>Illustrated Personal Website | Selene's Design</title>
+    <meta name="description" content="Portfolio of Selene, UX/UI & Product Designer">
     <meta property="og:title" content="portfolio">
-    <meta property="og:description" content="my portfolio">
+    <meta property="og:description" content="Illustrated Personal Website case study">
     <meta property="og:image" content="#">
     <meta property="og:url" content="#">
-    <meta property="og:type" content="website">   
+    <meta property="og:type" content="website">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/new_img/Favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
 </head>
-</head>
-
 <body>
 
-   <nav class="navbar fixed-top bg">
+    <nav class="navbar fixed-top" aria-label="Main navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Selene's website</a>
+            <a class="navbar-brand" href="../index.html" aria-label="Selene's Design, home">
+                <img src="../assets/img/new_img/Favicon.svg" alt="" width="38" height="34">
+            </a>
 
             <ul class="navbar-nav desktop-nav ms-auto d-none d-md-flex flex-row gap-4">
                 <li class="nav-item">
@@ -35,316 +34,296 @@
                     <a class="nav-link" href="../about/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../cv/cv.html">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
+                    <a class="nav-link" href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
                 </li>
             </ul>
 
-            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Open menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../about/about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../cv/cv.html">CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </nav>
 
-
-
-
-    <main class="project-detail">
-
-    <section class="text-center project-intro">
-        <h1 id="inP-title">Illustrated Personal Website</h1>
-
-
-            <section class="more-card-inP">
-                <div class="cards-wrapper-inP">
-                    <div class="text-content-inP">
-                        <h2>Project type</h2>
-                        <p>Browser-based gamified portfolio — a navigable 2D street environment where each shop is a content section, designed for both immersive exploration and fast-track access.</p>
-                    </div>
-
-                    <div class="text-content-inP">
-                        <h2>Role & Responsabilities</h2>
-                        <p>End-to-end Product Designer — responsible for UX strategy, information architecture, interaction design, motion system in Rive, UI design system, and prototype delivery.</p>
-                    </div>
-
-                    <div class="text-content-inP">
-                        <h2>Key outcomes</h2>
-                        <p>Validated a dual-navigation concept with 5 users, achieving 9.6/10 onboarding effectiveness and 400% faster task completion via map — confirming the game-feel approach without sacrificing usability.</p>
-                    </div>
-                </div>            
-            </section>
-
-        <div class="scroll-arrow">
-            <i class="fa-solid fa-arrow-down-long"></i>
+    <!-- Menu mobile: a tutto schermo, fuori dalla navbar (così non resta intrappolato nel suo riquadro) -->
+    <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-label="Menu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
         </div>
-
-        <p class="lead">You decide how deep you want to go — 30 seconds or 30 minutes, it's up to you.</p>
-    </section>
-
-
-    <div class="funfact-buddy">
-        <div class="funfact-comments-buddy justify-content-center">
-            <div class="fact-card-buddy">
-                <h3>Fast lane</h3>
-                <p>Click on the button below to see the final prototype.</p>
-            </div>
-            <div class="fact-card-buddy">
-                <h3>Scenic Route</h3>
-                <p>Key steps from problem analysis to prototype and user test.</p>
-            </div>
-            <div class="fact-card-buddy">
-                <h3>Deep dive</h3>
-                <p>Tap any step to open details about research, iterations, and outcomes.</p>
-            </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
+                </li>
+            </ul>
         </div>
-        <h3 class="choose-adventure">Figma file available at the moment.</h3>
     </div>
 
+    <main class="project-detail page-main">
 
-    <section class="d-flex flex-row justify-content-center gap-4 my-5">
-        <div class="button-proto">
-            <a href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=0-1&t=kKwwJ9CbeSClAufl-1" target="_blank" class="btn-proto desktop-link btn-outline-light">Design System</a>
-            <a href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=0-1&t=kKwwJ9CbeSClAufl-1" target="_blank" class="btn-proto mobile-link btn-outline-light">Design System</a>
-        </div>        
+        <section class="project-hero">
+            <h1 class="project-title">Gamefied Website</h1>
 
-        <div class="button-proto">
-            <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&t=gQeIcZXvW4azD0z6-1&scaling=scale-down&content-scaling=fixed&page-id=26%3A173&starting-point-node-id=136%3A20248&show-proto-sidebar=1" target="_blank" class="btn-proto desktop-link btn-outline-light">Prototype</a>
-            <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&t=gQeIcZXvW4azD0z6-1&scaling=scale-down&content-scaling=fixed&page-id=26%3A173&starting-point-node-id=136%3A20248&show-proto-sidebar=1" target="_blank" class="btn-proto mobile-link btn-outline-light">Prototype</a>
-        </div>  
-    </section>
-
-
-    
-    <!-- road -->
-
-
-    <section class="road-wrapper">
-        <h2 class="journey-title">My Journey</h2>
-        <h3 class="journey-subtitle">Tap any icon for a quick look into process and outcomes</h3>
-
-        <div class="road-container">
-            <img src="../assets/img/sentiero.svg" class="road-image" alt="Process path">
-            
-            
-            <div class="road-step step-1">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep1" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon1.svg" alt="icon of a chess piece">
+            <div class="info-cards">
+                <div class="info-card">
+                    <h2>Project type</h2>
+                    <p>Browser-based Gamified Portfolio. A navigable 2D street environment where each shop represents a content section, balancing immersive exploration with fast-track access.</p>
                 </div>
+                <div class="info-card">
+                    <h2>Role</h2>
+                    <p>End-to-end Product Designer (UX Strategy, Information Architecture, Interaction Design, Custom Illustrations, Rive Animations, UI Design System, Copywriting, Prototyping).</p>
+                </div>
+                <div class="info-card">
+                    <h2>Outcomes</h2>
+                    <p>Reduced average task completion time by 75% (~5:40 → ~1:20) across two testing rounds. <br> Validated dual-navigation concept, proving engagement without sacrificing usability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="under-hood" aria-labelledby="hood-title">
+            <h2 id="hood-title">Under the Hood</h2>
+            <div id="hoodCarousel" class="carousel slide" data-bs-interval="false" aria-roledescription="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>A gamified world still needs strict rules.</h3>
+                                <p>Explore a 65+ component Design System built for a navigable 2D environment. Color palette, layout logic, and responsive breakpoints engineered to keep the game-like experience consistent without breaking accessibility.</p>
+                                <a class="btn-site btn-site--solid" href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?t=7uZaqysauVB1wT3U-1" target="_blank" rel="noopener noreferrer">Open Design System</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/Ade/gallery1.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>Gamification without strategy is just a toy.</h3>
+                                <p>I mapped every user decision before writing a single line of code. Dual-navigation strategy (exploration vs. fast-track), 6-phase user flow, and behavioral loops designed to balance immersion with monster efficiency.</p>
+                                <a class="btn-site btn-site--solid" href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=2-3&t=7uZaqysauVB1wT3U-1" target="_blank" rel="noopener noreferrer">Explore UX Strategy</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/Ade/gallery2.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>Scalability isn't optional, even in a game.</h3>
+                                <p> A 65+ component library with atomic structure and strict governance. Information architecture documented across all breakpoints, ensuring the experience scales from mobile to desktop without losing the narrative thread.</p>
+                                <a class="btn-site btn-site--solid" href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=26-174&t=7uZaqysauVB1wT3U-1" target="_blank" rel="noopener noreferrer">Inspect the library</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/Ade/gallery3.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>Motion that serves the user, not the ego.</h3>
+                                <p>From WASD character movement to the Steam mini-game mechanic, every interaction was built in-line with performance and accessibility in mind. Validated with users who don't play games.</p>
+                                <a href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=2-2&t=7uZaqysauVB1wT3U-1" target="_blank" rel="noopener" class="btn-site btn-site--solid desktop-link">Explore Wireframes</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/Ade/gellery4.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hoodCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hoodCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="proto-jump text-center">
+            <p>Jump straight to the Prototype</p>
+            <div class="scroll-arrow"><i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i></div>
+            <!-- <a href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=0-1&amp;t=kKwwJ9CbeSClAufl-1" target="_blank" rel="noopener" class="btn-proto desktop-link">Design System</a><a href="https://www.figma.com/design/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=0-1&amp;t=kKwwJ9CbeSClAufl-1" target="_blank" rel="noopener" class="btn-proto mobile-link">Design System</a> -->
+            <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&amp;t=gQeIcZXvW4azD0z6-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=26%3A173&amp;starting-point-node-id=136%3A20248&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn-proto desktop-link">Prototype</a>
+            <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&amp;t=gQeIcZXvW4azD0z6-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=26%3A173&amp;starting-point-node-id=136%3A20248&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="btn-proto mobile-link">Prototype</a>
+        </section>
+
+        <section class="road-wrapper">
+            <h2 class="journey-title">My journey</h2>
+            <h3 class="journey-subtitle">Tap any icon for a focused overview of that specific step.</h3>
+
+            <div class="road-container road-container--10">
+                <img src="../assets/img/new_img/sentiero.svg" class="road-image" alt="">
+
+            <div class="road-step step-1">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep1" aria-label="Open details: Strategic Pivot">
+                    <img src="../assets/img/project 3 - Adele/icon1.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">1</div>
+                    <div class="step-num" aria-hidden="true">1</div>
                     <div class="step-description">
                         <h3>Strategic Pivot</h3>
-                        <p>Documented the decision to abandon a vertical layout for a navigable 2D world — and why that was the most strategic move for the project.</p>
+                        <p>Defining gamification goals to transform a static portfolio into an interactive experience.</p>
                     </div>
                 </div>
-            </div>     
-
+            </div>
 
             <div class="road-step step-2">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep2" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon2.svg" alt="icon of a target and an arrow">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep2" aria-label="Open details: Market Landscape">
+                    <img src="../assets/img/project 3 - Adele/icon2.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">2</div>
+                    <div class="step-num" aria-hidden="true">2</div>
                     <div class="step-description">
                         <h3>Market Landscape</h3>
-                        <p>Benchmarked RPGs and immersive portfolios <br>and elaborated a dual-navigation strategy. <br>Explorer mode for those who want to roam, Fast-Track mode for those who just need the answer.</p>
+                        <p>Analyzing competitor benchmarks to identify white space in interactive product design.</p>
                     </div>
-                </div>    
+                </div>
             </div>
-
 
             <div class="road-step step-3">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep3" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon3.svg" alt="icon of a diagram">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep3" aria-label="Open details: Structural Ecosystem">
+                    <img src="../assets/img/project 3 - Adele/icon3.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">3</div>
+                    <div class="step-num" aria-hidden="true">3</div>
                     <div class="step-description">
                         <h3>Structural Ecosystem</h3>
-                        <p> Instead of a sitemap, I designed a street in which proximity encodes semantic relationship. Three maps define how the system moves, not just what it contains.</p>
+                        <p> Mapping behavioral user flows to balance immersive exploration with fast-track access.</p>
                     </div>
                 </div>
             </div>
-
 
             <div class="road-step step-4">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep4" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon4.svg" alt="icon of one person">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep4" aria-label="Open details: Inclusive Journey">
+                    <img src="../assets/img/project 3 - Adele/icon4.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">4</div>
+                    <div class="step-num" aria-hidden="true">4</div>
                     <div class="step-description">
                         <h3>Inclusive Journey</h3>
-                        <p>The Recruiter needs outcomes in 60 seconds. The Enthusiast wants Easter eggs. Designing for both required locking accessibility constraints before opening Figma.</p>
+                        <p> Charting the user journey within the 2D navigation system to ensure accessibility.</p>
                     </div>
                 </div>
             </div>
-
 
             <div class="road-step step-5">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep5" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon5.svg" alt="icon of a wireframe - little square">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep5" aria-label="Open details: Wireframing">
+                    <img src="../assets/img/project 3 - Adele/icon5.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">5</div>
+                    <div class="step-num" aria-hidden="true">5</div>
                     <div class="step-description">
                         <h3>Wireframing</h3>
-                        <p>HUD elements locked before any visual styling. Low-fidelity wireframes carried real copy to validate user inten.</p>
+                        <p>Structuring low-fidelity wireframes and HUD dashboard layout to validate core mechanics.</p>
                     </div>
                 </div>
             </div>
-
 
             <div class="road-step step-6">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep6" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon6.svg" alt="icon of a running man">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep6" aria-label="Open details: Visuals &amp; Motion">
+                    <img src="../assets/img/project 3 - Adele/icon6.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">6</div>
+                    <div class="step-num" aria-hidden="true">6</div>
                     <div class="step-description">
                         <h3>Visuals & Motion</h3>
-                        <p>EPS vector assets built as atomic components, three directional walk cycles in Rive, and a deliberate choice of Rive over Lottie for real-time state control.</p>
+                        <p>Designing interface animation rules and dynamic visual feedback to enhance engagement.</p>
                     </div>
                 </div>
             </div>
-
 
             <div class="road-step step-7">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep7" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon7.svg" alt="icon of a lightbulb">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep7" aria-label="Open details: UI &amp; Design System">
+                    <img src="../assets/img/project 3 - Adele/icon7.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">7</div>
+                    <div class="step-num" aria-hidden="true">7</div>
                     <div class="step-description">
                         <h3>UI & Design System</h3>
-                        <p>A golden aura as the universal interactivity signal, validated across colour perception variants. A system built to scale, documented to hand off without a call.</p>
+                        <p>Building the visual identity and core component library for 2D environment consistency.</p>
                     </div>
                 </div>
             </div>
 
-           
             <div class="road-step step-8">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep8" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon8.svg" alt="icon of a magnifying glass that look at a user">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep8" aria-label="Open details: Usability Test">
+                    <img src="../assets/img/project 3 - Adele/icon8.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">8</div>
+                    <div class="step-num" aria-hidden="true">8</div>
                     <div class="step-description">
                         <h3>Usability Test</h3>
-                        <p>9.6/10 onboarding effectiveness. 400% faster task completion via map versus street scroll. The Snake minigame read as reward, not friction.</p>
+                        <p>Running validation sessions to stress-test the gamified navigation and iterate on feedback.</p>
                     </div>
                 </div>
             </div>
 
-
             <div class="road-step step-9">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep9" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon9.svg" alt="icon of a finger pointiong at a phone.">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep9" aria-label="Open details: Prototyping &amp; Constrains">
+                    <img src="../assets/img/project 3 - Adele/icon9.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">9</div>
+                    <div class="step-num" aria-hidden="true">9</div>
                     <div class="step-description">
-                        <h3>Prototyping & Constrains</h3>
-                        <p>Free WASD movement is fundamentally incompatible with Figma's fixed-state logic. I documented the constraints explicitly and turned the disclaimer into a stakeholder alignment tool.</p>
+                        <h3>Prototyping</h3>
+                        <p>Managing Figma interactive prototyping and animation within technical browser constraints.</p>
                     </div>
                 </div>
             </div>
 
             <div class="road-step step-10">
-                <div class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep10" style="cursor: pointer;">
-                    <img src="../assets/img/project 3 - Adele/icon10.svg" alt="icon of a magic wand with circuits">
-                </div>
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep10" aria-label="Open details: AI-Powered Workflow">
+                    <img src="../assets/img/project 3 - Adele/icon10.svg" alt="">
+                </button>
                 <div class="step-content">
-                    <div class="step-num">10</div>
+                    <div class="step-num" aria-hidden="true">10</div>
                     <div class="step-description">
-                        <h3>AI-Powered Workflow</h3>
-                        <p>Used AI to compress benchmarking cycles and stress-test flows via synthetic personas. Achieved Rive proficiency within 72h through targeted tutoring.</p>
+                        <h3>Powered Workflow</h3>
+                        <p>Optimizing the technical deployment strategy for clean, performant HTML/CSS output.</p>
                     </div>
                 </div>
             </div>
 
-
-        </div>
-
-
-        <div class="open-proto">
-            <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&t=gQeIcZXvW4azD0z6-1&scaling=scale-down&content-scaling=fixed&page-id=26%3A173&starting-point-node-id=136%3A20248&show-proto-sidebar=1" target="_blank" class="desktop-link">Open Prototype!</a>
-            <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&t=gQeIcZXvW4azD0z6-1&scaling=scale-down&content-scaling=fixed&page-id=26%3A173&starting-point-node-id=136%3A20248&show-proto-sidebar=1" target="_blank" class="mobile-link">Open Prototype!</a>
-        </div>
-    </section>
-</main>
-
-
-
-    <div class="footer-container">
-        <div class="footer-toggler">
-            <button class="btn btn-sm btn-custom-mimic" type="button" data-bs-toggle="collapse" data-bs-target="#footerCollapse" aria-expanded="false" aria-controls="footerCollapse">
-                <i class="fas fa-chevron-up collapse-toggle-icon"></i>
-            </button>
-        </div>
-
-    <footer class="custom-footer">
-        <div class="container">
-            <div class="text-center"> 
-                <h4 class="foot-ttl mb-5"><strong>Reach out</strong> if you want to find out more!</h4>
             </div>
-            <div class="collapse" id="footerCollapse">
-                
-                <div class="socials d-flex justify-content-center align-items-center flex-row">
 
-                    <div>
-                        <a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">
-                        <img src="../assets/img/linkedin-icon.svg" alt="linkedin link icon" style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.instagram.com/_.selene_design._/" target="_blank">
-                       <img src="../assets/img/insta-icon.svg" alt="instagram link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                       </a>
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank">
-                        <img src="../assets/img/fb-icon.svg" alt="facebook link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div> 
-                </div>
+            <div class="open-proto">
+                <a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&amp;t=gQeIcZXvW4azD0z6-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=26%3A173&amp;starting-point-node-id=136%3A20248&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="desktop-link">Open Prototype!</a><a href="https://www.figma.com/proto/bwhWQTeDo6ptIWKCfUN6pZ/Gamified-website?node-id=136-20248&amp;t=gQeIcZXvW4azD0z6-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=26%3A173&amp;starting-point-node-id=136%3A20248&amp;show-proto-sidebar=1" target="_blank" rel="noopener" class="mobile-link">Open Prototype!</a>
             </div>
-        </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <h2 class="footer-title">Follow for more</h2>
+        <ul class="footer-social">
+            <li><a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/_.selene_design._/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../assets/img/new_img/insta-icon.svg" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../assets/img/new_img/linkedin-icon.svg" alt=""></a></li>
+        </ul>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="../index.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
+            <a href="../contatti/contacts.html">Contacts</a>
+        </nav>
     </footer>
-    </div>
 
 
-<!-- blocchi modal  -->
+  <!-- blocchi modal  -->
 
     <div class="modal fade" id="modalStep1" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl"> 
@@ -355,21 +334,14 @@
                 </button>
 
                 <div class="modal-body p-0 position-relative">
-                <!-- <button class="nav-arrow prev" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-arrow next" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">
-                    <i class="fas fa-chevron-right"></i>
-                </button> -->
 
                     <div class="horizontal-scroll-wrapper" id="scroll-1">
-                        <img src="../assets/img/project 3 - Adele/1p.png" class="long-slide-img" alt="Presentation 1">
+                        <img src="../assets/img/Ade/1p.png" class="long-slide-img" alt="Presentation 1">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="modal fade" id="modalStep2" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl"> 
@@ -380,14 +352,9 @@
                 </button>
 
                 <div class="modal-body p-0 position-relative">
-                    <!-- <button class="nav-arrow prev" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="nav-arrow next" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">
-                        <i class="fas fa-chevron-right"></i>
-                    </button> -->
+
                     <div class="horizontal-scroll-wrapper" id="scroll-2">
-                        <img src="../assets/img/project 3 - Adele/2p.png" class="long-slide-img" alt="Presentation 1">
+                        <img src="../assets/img/Ade/2p.png" class="long-slide-img" alt="Presentation 1">
                     </div>
                 </div>
             </div>
@@ -403,15 +370,9 @@
                 </button>
 
                 <div class="modal-body p-0 position-relative">
-                    <!-- <button class="nav-arrow prev" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="nav-arrow next" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">
-                        <i class="fas fa-chevron-right"></i>
-                    </button> -->
 
                     <div class="horizontal-scroll-wrapper" id="scroll-3">
-                        <img src="../assets/img/project 3 - Adele/3p.png" class="long-slide-img" alt="Presentation 3">
+                        <img src="../assets/img/Ade/3p.png" class="long-slide-img" alt="Presentation 3">
                     </div>
                 </div>
             </div>
@@ -427,15 +388,9 @@
                 </button>
 
                 <div class="modal-body p-0 position-relative">
-                    <!-- <button class="nav-arrow prev" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="nav-arrow next" onclick="const s = this.parentElement.querySelector('.horizontal-scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">
-                        <i class="fas fa-chevron-right"></i>
-                    </button> -->
 
                     <div class="horizontal-scroll-wrapper" id="scroll-4">
-                        <img src="../assets/img/project 3 - Adele/4p.png" class="long-slide-img" alt="Presentation 4">
+                        <img src="../assets/img/Ade/4p.png" class="long-slide-img" alt="Presentation 4">
                     </div>
                 </div>
             </div>
@@ -452,9 +407,8 @@
 
                 <div class="modal-body p-0 position-relative">
 
-
                     <div class="horizontal-scroll-wrapper" id="scroll-5">
-                        <img src="../assets/img/project 3 - Adele/5p.png" class="long-slide-img" alt="Presentation 5">
+                        <img src="../assets/img/Ade/5p.png" class="long-slide-img" alt="Presentation 5">
                     </div>
                 </div>
             </div>
@@ -471,9 +425,8 @@
 
                 <div class="modal-body p-0 position-relative">
 
-
                     <div class="horizontal-scroll-wrapper" id="scroll-6">
-                        <img src="../assets/img/project 3 - Adele/6p.png" class="long-slide-img" alt="Presentation 6">
+                        <img src="../assets/img/Ade/6p.png" class="long-slide-img" alt="Presentation 6">
                     </div>
                 </div>
             </div>
@@ -491,7 +444,7 @@
                 <div class="modal-body p-0 position-relative">
 
                     <div class="horizontal-scroll-wrapper" id="scroll-7">
-                        <img src="../assets/img/project 3 - Adele/7p.png" class="long-slide-img" alt="Presentation 7">
+                        <img src="../assets/img/Ade/7p.png" class="long-slide-img" alt="Presentation 7">
                     </div>
                 </div>
             </div>
@@ -508,16 +461,13 @@
 
                 <div class="modal-body p-0 position-relative">
 
-
                     <div class="horizontal-scroll-wrapper" id="scroll-8">
-                        <img src="../assets/img/project 3 - Adele/8p.png" class="long-slide-img" alt="Presentation 8">
+                        <img src="../assets/img/Ade/8p.png" class="long-slide-img" alt="Presentation 8">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <div class="modal fade" id="modalStep9" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl"> 
@@ -530,7 +480,7 @@
                 <div class="modal-body p-0 position-relative">
 
                     <div class="horizontal-scroll-wrapper" id="scroll-9">
-                        <img src="../assets/img/project 3 - Adele/9p.png" class="long-slide-img" alt="Presentation 9">
+                        <img src="../assets/img/Ade/9p.png" class="long-slide-img" alt="Presentation 9">
                     </div>
                 </div>
             </div>
@@ -546,8 +496,9 @@
                 </button>
 
                 <div class="modal-body p-0 position-relative">
+
                     <div class="horizontal-scroll-wrapper" id="scroll-10">
-                        <img src="../assets/img/project 3 - Adele/10p.png" class="long-slide-img" alt="Presentation 10">
+                        <img src="../assets/img/Ade/10p.png" class="long-slide-img" alt="Presentation 10">
                     </div>
                 </div>
             </div>
@@ -555,4 +506,80 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        // Modali con striscia orizzontale: frecce, rotella, trascinamento col mouse, reset all'apertura
+        (function () {
+            document.querySelectorAll(".horizontal-scroll-wrapper").forEach(function (wrap) {
+                var body = wrap.parentElement;
+                wrap.tabIndex = 0;
+                wrap.setAttribute("aria-label", "Presentation: scroll horizontally to see all pages");
+
+                function makeArrow(dir) {
+                    var b = document.createElement("button");
+                    b.type = "button";
+                    b.className = "nav-arrow " + (dir < 0 ? "prev" : "next");
+                    b.setAttribute("aria-label", dir < 0 ? "Previous part" : "Next part");
+                    b.innerHTML = '<i class="fas fa-chevron-' + (dir < 0 ? "left" : "right") + '" aria-hidden="true"></i>';
+                    b.addEventListener("click", function () {
+                        wrap.scrollBy({ left: dir * wrap.clientWidth * 0.9, behavior: "smooth" });
+                    });
+                    body.appendChild(b);
+                    return b;
+                }
+
+                var prev = makeArrow(-1);
+                var next = makeArrow(1);
+
+                function update() {
+                    var max = wrap.scrollWidth - wrap.clientWidth;
+                    prev.classList.toggle("is-hidden", wrap.scrollLeft <= 2);
+                    next.classList.toggle("is-hidden", wrap.scrollLeft >= max - 2);
+                }
+
+                wrap.addEventListener("scroll", update, { passive: true });
+                window.addEventListener("resize", update);
+                var img = wrap.querySelector("img");
+                if (img) { img.addEventListener("load", update); img.addEventListener("dragstart", function (e) { e.preventDefault(); }); }
+
+                // Rotella verticale del mouse -> scorrimento orizzontale
+                wrap.addEventListener("wheel", function (e) {
+                    if (wrap.scrollWidth > wrap.clientWidth && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                        e.preventDefault();
+                        wrap.scrollLeft += e.deltaY;
+                    }
+                }, { passive: false });
+
+                // Trascinamento col mouse
+                var dragging = false, startX = 0, startLeft = 0;
+                wrap.addEventListener("pointerdown", function (e) {
+                    if (e.pointerType !== "mouse" || e.button !== 0) return;
+                    dragging = true;
+                    startX = e.clientX;
+                    startLeft = wrap.scrollLeft;
+                    wrap.classList.add("is-dragging");
+                });
+                window.addEventListener("pointermove", function (e) {
+                    if (dragging) wrap.scrollLeft = startLeft - (e.clientX - startX);
+                });
+                window.addEventListener("pointerup", function () {
+                    dragging = false;
+                    wrap.classList.remove("is-dragging");
+                });
+
+                update();
+            });
+
+            // Ogni volta che si apre un modale, la striscia riparte dall'inizio
+            document.querySelectorAll(".modal").forEach(function (modal) {
+                modal.addEventListener("shown.bs.modal", function () {
+                    var wrap = modal.querySelector(".horizontal-scroll-wrapper");
+                    if (!wrap) return;
+                    wrap.scrollLeft = 0;
+                    wrap.dispatchEvent(new Event("scroll"));
+                });
+            });
+        })();
+    </script>
 </body>
+</html>

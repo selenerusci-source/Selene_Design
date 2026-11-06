@@ -2,42 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selene's Design</title>
-    <meta name="description" content="Primo website creato con HTML, CSS, SASS e Bootstrap">
+    <title>About | Selene's Design</title>
+    <meta name="description" content="Portfolio of Selene, UX/UI & Product Designer">
     <meta property="og:title" content="About">
-    <meta property="og:description" content="about myself">
+    <meta property="og:description" content="About Selene">
     <meta property="og:image" content="#">
     <meta property="og:url" content="#">
     <meta property="og:type" content="website">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">  
-    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/new_img/Favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap" rel="stylesheet">  
-</head>  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
 </head>
-
 <body>
 
-  
-    <nav class="navbar fixed-top bg">
+    <nav class="navbar fixed-top" aria-label="Main navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Selene's website</a>
+            <a class="navbar-brand" href="../index.html" aria-label="Selene's Design, home">
+                <img src="../assets/img/new_img/Favicon.svg" alt="" width="38" height="34">
+            </a>
 
             <ul class="navbar-nav desktop-nav ms-auto d-none d-md-flex flex-row gap-4">
                 <li class="nav-item">
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../about/about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../cv/cv.html">CV</a>
+                    <a class="nav-link" href="../about/about.html" aria-current="page">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
@@ -47,171 +41,141 @@
                 </li>
             </ul>
 
-            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Open menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../about/about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../cv/cv.html">CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </nav>
 
-
-    
-
-    <main>
-
-        <section id="journey">
-            <!-- <div class="main-content d-flex flex-column flex-lg-row justify-content-center align-items-center p-5"> -->
-            <div class="main-content container d-flex flex-column flex-xl-row justify-content-center align-items-center gap-5 px-3 px-lg-5 py-5">
-
-                <div class="text-content-about text-center text-md-start mt-5 order-2 order-xl-2">
-                    <h1 class="about text-center text-md-start p-3 mb-5">Who am I?</h1>
-                    <p>I’m a UX/UI designer focused on creating user-centered digital experiences where usability, emotional engagement and business objectives work together.</p>
-                    <p>My background in visual design, complex illustration and storytelling allows me to craft interfaces and visual systems that feel clear, coherent and memorable — without compromising accessibility or functional clarity.</p>
-                    <p>Alongside core UX/UI practices, I actively integrate AI-powered tools and agents into my design workflow to support research, ideation and iteration, always with a critical, ethical and human-centered approach.</p>
-                    <p>I approach every project by balancing: 
-                        <br>•	user needs and behaviors  
-                        <br>•	business goals and technical constraints
-                        <br>•	narrative structure and visual consistency
-                    </p>
-                    <p>I continuously refine my skills and methods, aiming to grow as a designer who not only delivers polished interfaces, but designs experiences that guide users naturally, support decision-making and help brands communicate with clarity and authenticity.</p>    
-                </div>
-                <div class="image-content d-flex justify-content-center order-1 order-xl-1 ">
-                    <img src="../assets/img/about-me.svg" alt="illustrazione a mezzo busto di me" class="about-img mt-5 pt-5">
-                </div>
-            </div>
-        </section>
-
-        <div class="container-fluid ability">
-            <h2 class="text-center" id="skill-title">My Skill Set!</h2>
-            
-            <div class="ability-card-container" id="skill-container">
-                <div class="ability-card">
-                    <div class="ability-item">
-                        <img src="../assets/img/skillset-adobe.svg" alt="card skillset adobe">
-                        <p><strong>Adobe suite</strong></p>
-                        <ul>
-                            <li>llustrator</li>
-                            <li>Photoshop</li>
-                            <li>Indesign</li>
-                            <li>After Effects</li>
-                        </ul>
-                    </div>
-                    <div class="ability-item">
-                        <img src="../assets/img/figma-skillset.svg" alt="card skill figma">
-                        <p><strong>Figma</strong></p>
-                        <ul>
-                            <li>Wireframing</li>
-                            <li>Prototyping</li>
-                            <li>Presentation</li>
-                        </ul>
-                    </div>
-                    <div class="ability-item">
-                        <img src="../assets/img/skillset-framer.svg" alt="card framer">
-                        <p><strong>Framer</strong></p>
-                        <ul>
-                            <p>High-fidelity prototypes</p>
-                        </ul>
-                    </div>
-                    <div class="ability-item">
-                        <img src="../assets/img/skillset-zeplin.svg" alt="card zeplin">
-                        <p><strong>Zeplin</strong></p>
-                        <p>Handoff Managment</p>
-                    </div>
-                    <div class="ability-item">
-                        <img src="../assets/img/skillset-wave.svg" alt="card wave">
-                        <p><strong>WAVE</strong></p>
-                        <p>Accessibility Research & Optimization</p>
-                    </div>
-                </div>
-            </div>        
+    <!-- Menu mobile: a tutto schermo, fuori dalla navbar (così non resta intrappolato nel suo riquadro) -->
+    <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-label="Menu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
         </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about/about.html" aria-current="page">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <main class="about-stage">
+        <img class="stage-wool" src="../assets/img/Img_mod/woolAM.webp" alt="wool yarn">
 
-        <div class="my-progress">
-            <h2>The skill I'm currently developing</h2>
-        
-            <div class="progress-book d-flex justify-content-center align-items-center">
-                    <img src="../assets/img/about.dev-skills.svg" alt="pila di libri che tracciano i progressi">
+        <header class="about-hero">
+            <div class="about-copy">
+                <h1>A Portrait</h1>
+                <p>I build immersive digital ecosystems, not just websites. With my background in Cognitive Psychology, I engeneer every layer to align user psychology with business logic.
+                   I treat design trends as data, not dogma. Instead of a generic minimalism, I create tailored experiences that portray a specific story.</p>
+                <p>I own the entire process, from deep discovery to technical handoff; treating documentation and cross-team communication as non-negotiable. AI and accessibility aren't compliance checkboxes: they're strategic assets for usability.</p>
+                <p>Instead of raw talent I rely on relentless execution and don't believe in arbitrary limits. I constantly challenge myself: there is always a better way to design.</p>
+            </div>
+            <div class="about-art">
+                <img class="art-desktop" src="../assets/img/new_img/CatAD.svg" alt="A grey cat stretching towards two balls of teal yarn, followed by a trail of paw prints">
+                <img class="art-mobile" src="../assets/img/new_img/CatAM.svg" alt="A grey cat stretching towards two balls of teal yarn">
+            </div>
+        </header>
+
+        <div class="about-flow">
+            <img class="flow-wool" src="../assets/img/new_img/WoolAD.svg" alt="wool yarn desktop">
+
+            <div class="flow-content">
+
+            <section class="behind" aria-labelledby="behind-title">
+                <h2 id="behind-title">Behind the Pixels</h2>
+                <div class="behind-card">
+                    <div class="behind-text">
+                        <p>My design thinking doesn't stop at the screen; it's fueled by a lifelong obsession with tangible creation.</p>
+                        <p>Whether I'm sculpting custom action figures, experimenting with oil painting, or prototyping physical objects, I am driven by a compulsive need to experiment.</p>
+                        <p>This "maker" mindset is what allows me to bring a unique tactile sensibility to digital products. I don't just design interfaces; I build worlds.</p>
+                    </div>
+                    <div class="behind-gallery">
+                        <button type="button" class="gallery-arrow" data-dir="-1" aria-label="Previous photos"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+                        <div class="gallery-track" tabindex="0" aria-label="Photos of my physical work">
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/foto1.jpeg" alt="Photo 1 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/foto2.jpeg" alt="Photo 2 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/foto3.jpeg" alt="Photo 3 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/foto4.jpeg" alt="Photo 4 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/5.jpeg" alt="Photo 5 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/6.jpeg" alt="Photo 6 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/7.jpeg" alt="Photo 7 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/8.jpeg" alt="Photo 8 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/9.jpeg" alt="Photo 9 of my physical work" loading="lazy" draggable="false"></div>
+                        <div class="gallery-tile"><img src="../assets/img/about_gallery/10.jpeg" alt="Photo 10 of my physical work" loading="lazy" draggable="false"></div>
+                        </div>
+                        <button type="button" class="gallery-arrow" data-dir="1" aria-label="Next photos"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="side-quests" aria-labelledby="quests-title">
+                <h2 id="quests-title">Side Quests</h2>
+                <div class="quest-card">
+                    <p>My mind never hits "pause." To channel this creative energy outside of client work, I'm building a video game: a side project bridging sociological research with sensory storytelling.</p>
+                    <p>I'm obsessed with creating atmospheres where every shift in saturation or visual distortion is a deliberate psychological tool.</p>
+                    <p>But here is where my maniacal organization kicks in: what started as an inside joke is now a structured product with a strict roadmap of two-week milestones.</p>
+                    
+                </div>
+            </section>
+
+            <section class="fun-facts" aria-labelledby="facts-title">
+                <h2 id="facts-title">Fun facts about me</h2>
+                <ul class="fact-grid">
+                    <li>
+                        <h3>Research is my happy place.</h3>
+                        <p>There's a unique thrill in watching messy data transform into clear, strategic decisions.</p>
+                    </li>
+                    <li>
+                        <h3>Structure over scribbles.</h3>
+                        <p>My handwriting is a disaster. That's probably why I'm so obsessed with designing structured, digital-first systems.</p>
+                    </li>
+                    <li>
+                        <h3>Flow state: Activated.</h3>
+                        <br>
+                        <p>When the headphones are on, it means fewer distractions and much sharper design decisions.</p>
+                    </li>
+                </ul>
+            </section>
             </div>
         </div>
-
-
-        <div class="funfact">
-            <h2>Fun facts about me...</h2>
-            <div class="funfact-comments justify-content-center">
-                <div class="fact-card p-4">
-                <p>I genuinely enjoy the user research phase.  That's where the most valuable insights emerge.</p>
-                </div>
-                <div class="fact-card p-4">
-                <p>My handwriting is pratically a secret code,  so it's safer to keep things digital!</p>
-                </div>
-                <div class="fact-card p-4">
-                <p>With headphones on, my design improve by at least 60%</p>
-                </div>
-            </div>
-        </div>
-
     </main>
 
-    <div class="footer-container">
-    <div class="footer-toggler">
-        <button class="btn btn-sm btn-custom-mimic" type="button" data-bs-toggle="collapse" data-bs-target="#footerCollapse" aria-expanded="false" aria-controls="footerCollapse">
-            <i class="fas fa-chevron-up collapse-toggle-icon"></i>
-        </button>
-    </div>
-
-    <footer class="custom-footer">
-        <div class="container">
-            <div class="text-center"> 
-                <h4 class="foot-ttl mb-5"><strong>Reach out</strong> if you want to find out more!</h4>
-            <div class="collapse" id="footerCollapse">
-                
-                <div class="socials d-flex justify-content-center align-items-center flex-row">
-
-                    <div>
-                        <a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">
-                        <img src="../assets/img/linkedin-icon.svg" alt="linkedin link icon" style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.instagram.com/_.selene_design._/" target="_blank">
-                       <img src="../assets/img/insta-icon.svg" alt="instagram link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                       </a>
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank">
-                        <img src="../assets/img/fb-icon.svg" alt="facebook link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div> 
-                </div>
-            </div>
-        </div>
+    <footer class="site-footer" id="footer-about">
+        <h2 class="footer-title">Follow for more</h2>
+        <ul class="footer-social">
+            <li><a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/_.selene_design._/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../assets/img/new_img/insta-icon.svg" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../assets/img/new_img/linkedin-icon.svg" alt=""></a></li>
+        </ul>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="../index.html">Home</a>
+            <a href="../about/about.html" aria-current="page">About</a>
+            <a href="../portfolio/portfolios.html">Portfolio</a>
+            <a href="../contatti/contacts.html">Contacts</a>
+        </nav>
     </footer>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <script>
+        // Frecce della galleria "Behind the Pixels"
+        document.querySelectorAll(".gallery-arrow").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var track = btn.parentElement.querySelector(".gallery-track");
+                track.scrollBy({ left: Number(btn.dataset.dir) * track.clientWidth * 0.8, behavior: "smooth" });
+            });
+        });
+    </script>
 </body>
+</html>

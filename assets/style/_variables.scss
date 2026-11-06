@@ -1,0 +1,29 @@
+// ===== Design tokens =====
+// Palette presa dal progetto Figma (verde-petrolio scuro, crema, teal della "vernice")
+$bg: #0f2125;
+$surface: #1c2d31;
+$surface-raise: #243a3f;
+$cream: #f4f5d0;
+$sand: #dfd9b4;
+$teal: #0e7078;
+$teal-bright: #19a2ab;
+$teal-deep: #1f5558;
+
+// Font
+$font-display: "Centabel Book", serif;
+$font-body: "Albert Sans", sans-serif;
+$font-weight-body: 200;
+
+// Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+
+@mixin up($bp) {
+    @media (min-width: $bp) { @content; }
+}
+@mixin down($bp) {
+    @media (max-width: ($bp - 0.02px)) { @content; }
+}
+
+

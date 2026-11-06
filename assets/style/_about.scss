@@ -1,233 +1,397 @@
+// ===== ABOUT =====
+// Il filo di lana (SVG) disegna degli "spazi": le tre sezioni sono posizionate dentro quegli spazi,
+// con coordinate in % calcolate sulla forma reale del filo. Testi e card scalano con la larghezza
+// della pagina (unita' cqw), cosi' restano dentro lo spazio a qualsiasi larghezza.
+.about-stage {
+    position: relative;
+    max-width: 1240px;
+    margin-inline: auto;
+    overflow-x: clip;
+    container-type: inline-size;
+}
 
-.main-content{
-    padding-top: 60px;
-    color: rgb(244, 245, 208);
-    .about{
-        font-size: 56px;
+// ---------- A Portrait: testo a sinistra, gatto + traccia di zampe a tutta larghezza ----------
+.about-hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    // minmax(0, 1fr) e' fondamentale: senza, la misura "in mm" degli SVG allarga la colonna
+    grid-template-columns: minmax(0, 1fr);
+    padding: 125px 24px 0;
+
+    > * {
+        grid-area: 1 / 1;
+        min-width: 0;
     }
-}
 
+    .about-copy {
+        position: relative;
+        z-index: 2;
+        align-self: start;
+        max-width: 44%;
+        padding-bottom: clamp(3rem, 7vw, 6.5rem); // respiro sopra la traccia di zampe
 
-
-
-// html, body { overflow-x: hidden; }
-// * { box-sizing: border-box; }
-
-
-
-.text-content-about{
-    width: 100%;
-    max-width: 700px;      // prova 650–750 se vuoi
-    margin-inline: auto;   // centra quando sei in colonna
-    box-shadow: 0 0 10px;
-    border: 2px solid rgb(223, 217, 180); // qui avevi scritto border-color: 2px solid...
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    padding: 20px;
-}
-
-
-.image-content img{
-    width: clamp(240px, 35vw, 380px);
-    height: auto;
-    max-width: 100%;
-}
-
-
-/* quando sei in modalità "desktop" (da lg in su) */
-// @media (min-width: 992px) {
-//   .main-content {
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   /* blocco testo: non deve schiacciarsi troppo */
-//   .text-content {
-//     flex: 0 0 500px;   // larghezza "ferma" (puoi mettere 600/650/700)
-//     max-width: 640px;
-//     margin: 0;
-//   }
-
-//   /* immagine: non deve diventare minuscola */
-//   .image-content {
-//     flex: 0 0 380px;   // larghezza "ferma" coerente con la tua immagine
-//     display: flex;
-//     justify-content: center;
-//   }
-
-//   .image-content img {
-//     width: 380px;
-//     height: auto;
-//   }
-// }
-
-@media (min-width: 1200px) {
-  .main-content{
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;                 // distanza tra immagine e box testo
-  }
-
-  .text-content{
-    flex: 0 0 680px;           // LARGHEZZA STABILE del box
-    max-width: 680px;
-    margin-inline: 0;
-  }
-
-  .image-content{
-    flex: 0 0 420px;           // SPAZIO STABILE per l'immagine
-    display: flex;
-    justify-content: center;
-  }
-
-  .image-content img{
-    width: 420px;
-    height: auto;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .image-content img{
-//     width: 380px ;
-//     height: 480px;
-// }
-
-.ability {
-    #skill-title{
-        color: rgb(244, 245, 208);
-        font-size: 56px;
-        margin-bottom: 80px;
-        margin-top: 150px;
-    }
-        li{
-        text-align: start;        
-        list-style-position: inside;           
-    }
-}
-
-.ability #skill-container{
-    padding-top: 50px;
-}
-
-.my-progress h2{
-    color:  rgb(244, 245, 208);
-    padding:10px;
-    font-size: 56px;
-    margin-top: 200px;
-    margin-bottom: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.progress-book img{
-    padding: 10px;
-    width: 1000px;
-    height: 800px;
-    overflow: hidden;
-}
-
-
-.funfact h2{
-    color:  rgb(244, 245, 208);
-    font-size: 56px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.funfact-comments{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap:wrap;
-    padding: 50px;
-}
-
-.fact-card{
-    width: 200px;
-    margin: 10px;
-    border: 3px solid rgb(212, 156, 133);
-    text-align: center;
-    border-radius: 4px;
-}
-
-.fact-card p{
-    color: rgb(244, 245, 208); 
-    margin-bottom: 0; 
-    font-size: 1rem;
-}
-
-@media (max-width: 768px){
-    .main-content{
-        padding: 20px 10px !important;
-        .about{
-            font-size: 44px;
+        h1 {
+            font-size: 128px;
+            margin-bottom: 1.8rem;
         }
-        .text-content {
-            margin: 20px!important; // Rimuove il margine che spinge il testo
-            width: 100% !important;     // Forza il testo a usare tutto lo spazio
-            padding: 0px 15px;            // Lascia solo un minimo di respiro dai bordi
-        
-            p {
-                max-width: 100%;       // Impedisce che il testo resti "stretto"
+
+        p {
+            font-size: 18px;
+            margin-bottom: 1.15rem;
+        }
+    }
+
+    .about-art {
+        align-self: end;
+        width: 78%;
+
+        img {
+            display: block;
+            width: 110%;
+            height: auto;
+        }
+
+        .art-mobile { display: none; }
+    }
+}
+
+.stage-wool { display: none; } // il filo "mobile" compare solo sotto i 992px
+
+// ---------- Filo + sezioni (desktop) ----------
+// Il filo e' in flusso e da' l'altezza; le sezioni sono posizionate in % della sua altezza.
+.about-flow {
+    position: relative;
+    z-index: 0;
+    margin-top: -20%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+
+    > * { min-width: 0; }
+
+    .flow-wool {
+        grid-area: 1 / 1;
+        align-self: start;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+    }
+
+    .flow-content {
+        grid-area: 1 / 1;
+        position: relative;
+    }
+}
+
+.behind,
+.side-quests,
+.fun-facts {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+        font-size: 64px;
+        // margin-bottom: clamp(0.6rem, 1.4cqw, 1.2rem);
+        margin-bottom: 50px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.42;
+        margin-bottom: 0.5rem;
+    }
+}
+
+// Behind the Pixels: a sinistra del filo che scende sul lato destro
+.behind      { top: 12%;   height: 26%;   left: 10%; right: 22%; }
+// Side Quests: dentro il primo "riquadro" del filo
+.side-quests { top: 43.5%; height: 21.5%; left: 12%; right: 16%; }
+// Fun facts: dentro il secondo riquadro
+.fun-facts   { top: 71%;   height: 22%;   left: 11%; right: 19%; }
+
+.behind-card {
+    border: 2px solid $sand;
+    background: $bg;
+
+    .behind-text {
+        background: $cream;
+        color: $bg;
+        padding: clamp(0.8rem, 2.4cqw, 2.2rem) clamp(1rem, 4cqw, 3.6rem);
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 0.6em;
+            max-width: none;
+
+            &:last-child { margin-bottom: 0; }
+        }
+    }
+}
+
+.behind-gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: clamp(0.5rem, 0.9cqw, 1rem) 0.5rem;
+
+    .gallery-track {
+        display: flex;
+        gap: 0.9cqw;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        flex: 1;
+        min-width: 0;
+
+        &::-webkit-scrollbar { display: none; }
+    }
+
+    // Foto dei lavori fisici (action figure, pittura a olio...): quadrate, ritagliate al centro
+    .gallery-tile {
+        flex: 0 0 clamp(70px, 9.5cqw, 150px);
+        aspect-ratio: 1;
+        background: #d9d9d9; // visibile solo finche' la foto non e' caricata
+        overflow: hidden;
+        scroll-snap-align: start;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -webkit-user-drag: none;
+        }
+    }
+
+    .gallery-arrow {
+        flex: 0 0 auto;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: $cream;
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover { color: $teal-bright; }
+    }
+}
+
+.quest-card {
+    padding: clamp(0.9rem, 2cqw, 1.8rem) clamp(1rem, 3.2cqw, 3rem);
+    background: $surface;
+    border: 2px solid $sand;
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba($cream, 0.32);
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 0.6em;
+        max-width: none;
+
+        &:last-child { margin-bottom: 0; }
+    }
+}
+
+.fact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid $sand;
+    background: $bg;
+
+    li {
+        padding: clamp(1rem, 2.2cqw, 2rem) clamp(0.7rem, 1.6cqw, 1.4rem);
+        text-align: center;
+
+        + li { border-left: 1px solid $sand; }
+    }
+
+    h3 {
+        font-family: $font-display;
+        font-size: 24px;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 1;
+        margin: 0 auto;
+    }
+}
+
+// ---------- Mobile e tablet (< 992px) ----------
+
+// Le sezioni stanno negli spazi tra le sue parti orizzontali.
+@include down($bp-lg) {
+
+    .about-stage {
+        // Sotto i 992px il layout resta "da telefono" (max 560px), centrato: anche su tablet le proporzioni tengono
+        --sw: min(100vw, 560px);
+        --wt: calc(20px + var(--sw) * 0.46);              // dove parte il filo: i gomitoli stanno accanto al gatto
+        --wh: calc(var(--sw) * 8.057);                      // altezza del filo
+        max-width: 560px;
+        min-height: calc(var(--wt) + var(--wh) + 4rem);
+    }
+
+    .about-hero {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 20px 0;
+
+        .about-art {
+            order: -1;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            margin-top:0;
+            margin-bottom: 0;
+
+            .art-desktop { display: none; }
+
+            .art-mobile  { 
+                display: block;
+                width: 70%;
+                height: auto;
+                margin-top: 50px; // sposta il gatto verso l'alto, per allinearlo al filo
+                margin-left: -1%; // sposta il gatto verso sinistra, per allinearlo al filo
             }
         }
-    }
-    .image-content img{
-        width: 280px;
-        height: 380px;
-    }
-}
 
-@media(max-width: 768px){
-    .ability{
-        #skill-title{
-            font-size: 44px;
+        .about-copy {
+            max-width: none;
+            padding: 5% 10% 0 0; // lascia libero il tratto verticale del filo a destra
+
+            h1 {
+                font-size: 73px;
+                text-align: left;       // a sinistra: a destra ci sono i gomitoli
+                // margin: 1.2rem 0 1rem;
+                margin-bottom: 30; 
+                margin-top: 0;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.42;
+                margin-bottom: 0;
+            }
+
+            // il primo paragrafo lascia spazio ai gomitoli
+            p:first-of-type { padding-right: 0; }
         }
     }
-}
 
-@media (max-width: 768px){
-    .my-progress h2{
-        font-size: 44px;
-        text-align: center;
+    .stage-wool {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        top: var(--wt);
+        left: 0;
+        width: 100%;
+        height: -50%;
+        pointer-events: none;
     }
-}
 
-@media (max-width: 768px){
-    .progress-book img{
-        width: 700px;
-        height: 500px;
-        overflow: hidden;
+    .about-flow {
+        position: static;
+        display: block;
+        margin-top: 0;
+
+        .flow-wool { display: none; }
+        .flow-content { position: static; }
     }
-}
 
-@media (max-width: 768px){
-    .funfact h2{
-        text-align: center;
-        font-size: 44px;    
+    .behind,
+    .side-quests,
+    .fun-facts {
+        z-index: 1;
+
+        h2 { font-size: 42px;
+            margin-bottom: 4rem; // Stacco netto tra il titolo e la card/box sottostante
+            text-align: center;
+        }
+        p { font-size: 16px; 
+            line-height: 1.42;
+            margin-bottom: 0.5rem;
+        }
     }
-}
 
-@media (max-width: 768px){
-    .fact-card{
-        width: 300px;
+    // percentuali = posizione lungo il filo (0% = gomitoli, 100% = fine)
+   
+    .behind      { top: calc(var(--wt) + var(--wh) * 0.22); height: auto; left: 20%; right: 10%; }
+    .side-quests { top: calc(var(--wt) + var(--wh) * 0.45); height: auto; left: 8%;  right: 15%; }
+    .fun-facts   { top: calc(var(--wt) + var(--wh) * 0.64); height: auto; left: 15%;  right: 6%; }
+
+    .behind-card .behind-text {
+        padding: clamp(1.2rem, 3.5cqw, 2.5rem) clamp(1rem, 4cqw, 3.6rem); // Aumenta il respiro sopra e sotto
+    }
+
+    .behind-card .behind-text p,
+    .quest-card p { font-size: 16px; }
+
+    .quest-card {
+        padding: clamp(2rem, 4cqw, 3.5rem) clamp(2rem, 5.5cqw, 5rem); // Aumenta il respiro sopra e sotto
+        line-height: 1.5;
+    }
+
+    .behind-gallery {
+        min-height: 200px; // Aumenta l'altezza complessiva della gallery in mobile
+        padding: 1rem 0.5rem;
+
+        .gallery-tile {
+            flex: 0 0 clamp(90px, 28cqw, 150px); // Rende le anteprime più grandi e visibili
+            aspect-ratio: 1;
+        }
+    }
+
+    // Trasforma la griglia unita in card separate e ben spaziate tra loro in mobile
+    .fact-grid {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid $sand; // Bordo unico esterno come Figma
+        border-radius: 12px;
+        background: $bg;
+        padding: 0;
+
+        li {
+            padding: 1.2rem 1.1rem;
+            text-align: center;
+            background: transparent;
+
+            + li {
+                border-left: none;
+                border-top: 1px solid rgba($sand, 0.6); // Linea divisoria orizzontale interna
+            }
+        }
+
+        h3 { 
+            font-size: 24px; 
+            margin-bottom: 0.5rem; 
+            color: $cream;
+        }
+        
+        p { 
+            font-size: 16px; 
+            line-height: 1.45;
+        }
+    }
+
+    #footer-about {
+        margin-top: -50rem !important; // Riporta su il footer agganciandolo meglio ai flussi di vernice/filo
+        padding-bottom: 0;
     }
 }

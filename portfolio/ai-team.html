@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selene's Design</title>
-    <meta name="description" content="first website created with HTML, CSS, SASS and Bootstrap">
+    <title>AI Team | Selene's Design</title>
+    <meta name="description" content="Portfolio of Selene, UX/UI & Product Designer">
     <meta property="og:title" content="portfolio">
-    <meta property="og:description" content="my portfolio">
+    <meta property="og:description" content="AI Team case study">
     <meta property="og:image" content="#">
     <meta property="og:url" content="#">
-    <meta property="og:type" content="website">   
+    <meta property="og:type" content="website">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/new_img/Favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
 </head>
-</head>
-
 <body>
 
-   <nav class="navbar fixed-top bg">
+    <nav class="navbar fixed-top" aria-label="Main navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Selene's website</a>
+            <a class="navbar-brand" href="../index.html" aria-label="Selene's Design, home">
+                <img src="../assets/img/new_img/Favicon.svg" alt="" width="38" height="34">
+            </a>
 
             <ul class="navbar-nav desktop-nav ms-auto d-none d-md-flex flex-row gap-4">
                 <li class="nav-item">
@@ -35,157 +34,552 @@
                     <a class="nav-link" href="../about/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../cv/cv.html">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
+                    <a class="nav-link" href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
                 </li>
             </ul>
 
-            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Open menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../about/about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../cv/cv.html">CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </nav>
 
-
-
-
-    <main class="project-detail">
-
-    <section class="text-center project-intro">
-        <h1 id="inP-title">AI Team</h1>
-
-
-            <section class="more-card-inP">
-                <div class="cards-wrapper-inP">
-                    <div class="text-content-inP">
-                        <h2>Project type</h2>
-                        <p>AI-powered SaaS product designed to accelerate internal workflows through multi-agent systems and operational dashboards. </p>
-                    </div>
-
-                    <div class="text-content-inP">
-                        <h2>Role & Responsabilities</h2>
-                        <p>Lead UX/UI Designer — defining information architecture, dashboards, and core interaction flows, from early wireframes to high-fidelity UI.  </p>
-                    </div>
-
-                    <div class="text-content-inP">
-                        <h2>Key outcomes</h2>
-                        <p>Validated product structure through wireframes before high-fidelity design, delivering a scalable UI system and vector-based interface optimized for lightweight performance and prototyping clarity.</p>
-                    </div>
-                </div>            
-            </section>
-
-        <div class="scroll-arrow">
-            <i class="fa-solid fa-arrow-down-long"></i>
+    <!-- Menu mobile: a tutto schermo, fuori dalla navbar (così non resta intrappolato nel suo riquadro) -->
+    <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-label="Menu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
         </div>
-
-        <p class="lead">You decide how deep you want to go — 30 seconds or 30 minutes, it's up to you.</p>
-    </section>
-
-
-    <div class="funfact-buddy">
-        <div class="funfact-comments-buddy justify-content-center">
-            <div class="fact-card-buddy">
-                <h3>Fast lane</h3>
-                <p>Click on the button below to see the final prototype.</p>
-            </div>
-            <div class="fact-card-buddy">
-                <h3>Scenic Route</h3>
-                <p>Key steps from problem analysis to prototype and user test.</p>
-            </div>
-            <div class="fact-card-buddy">
-                <h3>Deep dive</h3>
-                <p>Tap any step to open details about research, iterations, and outcomes.</p>
-            </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
+                </li>
+            </ul>
         </div>
-        <h3 class="choose-adventure">Figma file available at the moment.</h3>
     </div>
 
-    <div class="button-proto d-flex justify-content-center gap-3 my-5">
-        <a href="https://www.figma.com/design/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=0-1&t=Yt030pHe48mJUsYF-1" target="_blank" class="btn-proto desktop-link btn-outline-light">See Figma file</a>
-        <a href="https://www.figma.com/design/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=0-1&t=Yt030pHe48mJUsYF-1" target="_blank" class="btn-proto mobile-link btn-outline-light">See Figma file</a>
-    </div>        
+    <main class="project-detail page-main">
 
+        <section class="project-hero">
+            <h1 class="project-title">AI Team</h1>
 
-    <!-- road -->
-
-
-    <section class="road-wrapper-inP">
-        <h2 class="journey-title-inP">My Journey</h2>
-
-        <div class="road-container-inP">
-            <img src="../assets/img/road.construction_1.svg" class="road-image-inP" alt="Process path">
-        </div>
-    </section>
-</main>
-
-
-
-    <div class="footer-container">
-        <div class="footer-toggler">
-            <button class="btn btn-sm btn-custom-mimic" type="button" data-bs-toggle="collapse" data-bs-target="#footerCollapse" aria-expanded="false" aria-controls="footerCollapse">
-                <i class="fas fa-chevron-up collapse-toggle-icon"></i>
-            </button>
-        </div>
-
-    <footer class="custom-footer">
-        <div class="container">
-            <div class="text-center"> 
-                <h4 class="foot-ttl mb-5"><strong>Reach out</strong> if you want to find out more!</h4>
+            <div class="info-cards">
+                <div class="info-card">
+                    <h2>Project type</h2>
+                    <p>AI Product Concept & Proof of Concept. Vision: AI-powered platform accelerating corporate workflows via multi-agent orchestration.</p>
+                </div>
+                <div class="info-card">
+                    <h2>Role</h2>
+                    <p>Lead Product Designer. Scope: End-to-end design (UX Strategy, UI/Visual Design, Copywriting, and Design System governance).</p>
+                </div>
+                <div class="info-card">
+                    <h2>Outcomes</h2>
+                    <p>Deciphered core user pain points to architect an adaptable multi-agent workflow serving diverse profiles without increasing cognitive load. Delivered a validated, token-driven design system and clear interaction flows, ready for seamless MVP development.</p>
+                </div>
             </div>
-            <div class="collapse" id="footerCollapse">
-                
-                <div class="socials d-flex justify-content-center align-items-center flex-row">
+        </section>
 
-                    <div>
-                        <a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">
-                        <img src="../assets/img/linkedin-icon.svg" alt="linkedin link icon" style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
+        <section class="under-hood" aria-labelledby="hood-title">
+            <h2 id="hood-title">Under the Hood</h2>
+            <div id="hoodCarousel" class="carousel slide" data-bs-interval="false" aria-roledescription="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#hoodCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>Design System</h3>
+                                <p>Complex AI needs simple rules. Body: Explore a Figma file featuring an Atomic Design System built for multi-agent collaboration. High-contrast tokens (WCAG 2.1), clear variants for 6 distinct AI personas, and zero guesswork.</p>
+                                <a class="btn-site btn-site--solid" href="https://www.figma.com/design/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=282-2&t=7uZaqysauVB1wT3U-1" target="_blank">Open design system</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/AI-team/gallery1 (2).png" alt=""></div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="https://www.instagram.com/_.selene_design._/" target="_blank">
-                       <img src="../assets/img/insta-icon.svg" alt="instagram link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                       </a>
+                    <div class="carousel-item">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>AI without strategy is just a chatbot.</h3>
+                                <p>I mapped every decision point before designing a single screen. Flowcharts and user journeys orchestrating the handoff between 6 specialized agents, balancing automation with human oversight to minimize cognitive load.</p>
+                                <a class="btn-site btn-site--solid" href="https://www.figma.com/design/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=325-15961&t=7uZaqysauVB1wT3U-1 " target="_blank">Explore UX strategy</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/AI-team/gallery2.png" alt=""></div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank">
-                        <img src="../assets/img/fb-icon.svg" alt="facebook link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div> 
+                    <div class="carousel-item">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>Scalability isn't optional, even with AI.</h3>
+                                <p>A 60+ component library. Meticulous attention to detail, atomic structure, and strict governance to ensure the multi-agent interface scales from simple chat to complex views without breaking consistency.</p>
+                                <a class="btn-site btn-site--solid" href="https://www.figma.com/design/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=34-2&t=7uZaqysauVB1wT3U-1" target="_blank">Inspect the UI library</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/AI-team/gallery3.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="hood-slide">
+                            <div class="hood-text">
+                                <h3>Logic first, pixels second.</h3>
+                                <p>From low-fi wireframes mapping agent logic to a high-fidelity, tested prototype. Validated with real users to ensure the multi-agent collaboration works seamlessly before applying the final visual layer.</p>
+                                <a href="https://www.figma.com/design/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=0-1&t=7uZaqysauVB1wT3U-1" target="_blank" rel="noopener" class="btn-site btn-site--solid desktop-link">Explore Wireframes</a>
+                            </div>
+                            <div class="hood-visual"><img src="../assets/img/AI-team/gallery4.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hoodCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hoodCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="proto-jump text-center">
+            <p>Jump straight to the Figma file</p>
+            <div class="scroll-arrow"><i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i></div>
+            <a href="https://www.figma.com/proto/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=174-1410&t=irq4nVxx1ESqIRS2-1&scaling=scale-down&content-scaling=fixed&page-id=34%3A261&starting-point-node-id=34%3A674" target="_blank" rel="noopener" class="btn-proto desktop-link">Open Prototype</a>
+            <a href="https://www.figma.com/proto/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=147-975&t=pC1YfGszQXqQnqOa-1&scaling=scale-down&content-scaling=fixed&page-id=34%3A262&starting-point-node-id=34%3A1610" target="_blank" rel="noopener" class="btn-proto mobile-link">Open Prototype</a>
+        </section>
+
+        <section class="road-wrapper">
+            <h2 class="journey-title">My journey</h2>
+            <h3 class="journey-subtitle">Tap any icon for a focused overview of that specific step.</h3>
+
+            <div class="road-container road-container--10">
+                <img src="../assets/img/new_img/sentiero.svg" class="road-image" alt="">
+
+            <div class="road-step step-1">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep1" aria-label="Open details: Project Direction">
+                    <img src="../assets/img/AI-team/icon1.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">1</div>
+                    <div class="step-description">
+                        <h3>Origin & Hypotheses</h3>
+                        <p>Distributing context across 6 specialized agents to eliminate prompt fatigue and drive productivity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-2">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep2" aria-label="Open details: Market Research">
+                    <img src="../assets/img/AI-team/icon2.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">2</div>
+                    <div class="step-description">
+                        <h3>Market Landscape</h3>
+                        <p>Targeting the gap between custom GPTs and complex frameworks like CrewAI for non-devs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-3">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep3" aria-label="Open details: Brand Identity">
+                    <img src="../assets/img/AI-team/icon3.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">3</div>
+                    <div class="step-description">
+                        <h3>Research & Accessibility</h3>
+                        <p>Exposing "context loss" as the primary friction and building 3 adaptive interaction modes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-4">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep4" aria-label="Open details: IA Structure">
+                    <img src="../assets/img/AI-team/icon4.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">4</div>
+                    <div class="step-description">
+                        <h3>Structural Ecosystem</h3>
+                        <p> Mapping an agent-centric Information Architecture across 4 core flows for enterprise scaling.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-5">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep5" aria-label="Open details: Wireframing">
+                    <img src="../assets/img/AI-team/icon5.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">5</div>
+                    <div class="step-description">
+                        <h3>Wireframing</h3>
+                        <p>Pairing low-fidelity layouts with high-fidelity microcopy to validate hierarchy before visual distraction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-6">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep6" aria-label="Open details: UI System">
+                    <img src="../assets/img/AI-team/icon6.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">6</div>
+                    <div class="step-description">
+                        <h3>Visual Identity</h3>
+                        <p> Anchoring the system with a circuit-terminal logo and 6 distinct, diverse agent avatars.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-7">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep7" aria-label="Open details: Prototyping">
+                    <img src="../assets/img/AI-team/icon7.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">7</div>
+                    <div class="step-description">
+                        <h3>Design System</h3>
+                        <p>Enforcing WCAG compliance at the system level through a 4px grid and semantic tokens</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-8">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep8" aria-label="Open details: User Validation">
+                    <img src="../assets/img/AI-team/icon8.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">8</div>
+                    <div class="step-description">
+                        <h3>Prototyping</h3>
+                        <p>Using simulated tap-based flows to turn technical limitations into methodological testing parameters.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-9">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep9" aria-label="Open details: AI Usage">
+                    <img src="../assets/img/AI-team/icon9.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">9</div>
+                    <div class="step-description">
+                        <h3>Usability Test</h3>
+                        <p>Achieving 100% task completion in under 5 minutes and iterating on CTA contrast.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="road-step step-10">
+                <button type="button" class="step-icon" data-bs-toggle="modal" data-bs-target="#modalStep10" aria-label="Open details: Next Steps">
+                    <img src="../assets/img/AI-team/icon10.svg" alt="">
+                </button>
+                <div class="step-content">
+                    <div class="step-num" aria-hidden="true">10</div>
+                    <div class="step-description">
+                        <h3>AI-Powered Workflow</h3>
+                        <p>Leveraging AI for competitive synthesis and synthetic persona-prompting while retaining human ownership.</p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="open-proto">
+                <a href="https://www.figma.com/proto/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=174-1410&t=irq4nVxx1ESqIRS2-1&scaling=scale-down&content-scaling=fixed&page-id=34%3A261&starting-point-node-id=34%3A674" target="_blank" rel="noopener" class="desktop-link">Open Prototype</a>
+                <a href="https://www.figma.com/proto/H1VmEmxRmeqHfrBqw1Akir/Untitled?node-id=147-975&t=pC1YfGszQXqQnqOa-1&scaling=scale-down&content-scaling=fixed&page-id=34%3A262&starting-point-node-id=34%3A1610" target="_blank" rel="noopener" class="mobile-link">Open Prototype</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <h2 class="footer-title">Follow for more</h2>
+        <ul class="footer-social">
+            <li><a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/_.selene_design._/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../assets/img/new_img/insta-icon.svg" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../assets/img/new_img/linkedin-icon.svg" alt=""></a></li>
+        </ul>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="../index.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
+            <a href="../contatti/contacts.html">Contacts</a>
+        </nav>
+    </footer>
+
+
+  <!-- blocchi modal  -->
+
+    <div class="modal fade" id="modalStep1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-1">
+                        <img src="../assets/img/AI-team/p1.png" class="long-slide-img" alt="Presentation 1">
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
     </div>
 
+    <div class="modal fade" id="modalStep2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-2">
+                        <img src="../assets/img/AI-team/p2.png" class="long-slide-img" alt="Presentation 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-3">
+                        <img src="../assets/img/AI-team/p3.png" class="long-slide-img" alt="Presentation 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-4">
+                        <img src="../assets/img/AI-team/p4.png" class="long-slide-img" alt="Presentation 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-5">
+                        <img src="../assets/img/AI-team/p5.png" class="long-slide-img" alt="Presentation 5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-6">
+                        <img src="../assets/img/AI-team/p6.png" class="long-slide-img" alt="Presentation 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-7">
+                        <img src="../assets/img/AI-team/p7.png" class="long-slide-img" alt="Presentation 7">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-8">
+                        <img src="../assets/img/AI-team/p8.png" class="long-slide-img" alt="Presentation 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep9" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-9">
+                        <img src="../assets/img/AI-team/p9.png" class="long-slide-img" alt="Presentation 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStep10" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> 
+            <div class="modal-content custom-modal-style">
+            
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="modal-body p-0 position-relative">
+
+                    <div class="horizontal-scroll-wrapper" id="scroll-10">
+                        <img src="../assets/img/AI-team/p10.png" class="long-slide-img" alt="Presentation 10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        // Modali con striscia orizzontale: frecce, rotella, trascinamento col mouse, reset all'apertura
+        (function () {
+            document.querySelectorAll(".horizontal-scroll-wrapper").forEach(function (wrap) {
+                var body = wrap.parentElement;
+                wrap.tabIndex = 0;
+                wrap.setAttribute("aria-label", "Presentation: scroll horizontally to see all pages");
+
+                function makeArrow(dir) {
+                    var b = document.createElement("button");
+                    b.type = "button";
+                    b.className = "nav-arrow " + (dir < 0 ? "prev" : "next");
+                    b.setAttribute("aria-label", dir < 0 ? "Previous part" : "Next part");
+                    b.innerHTML = '<i class="fas fa-chevron-' + (dir < 0 ? "left" : "right") + '" aria-hidden="true"></i>';
+                    b.addEventListener("click", function () {
+                        wrap.scrollBy({ left: dir * wrap.clientWidth * 0.9, behavior: "smooth" });
+                    });
+                    body.appendChild(b);
+                    return b;
+                }
+
+                var prev = makeArrow(-1);
+                var next = makeArrow(1);
+
+                function update() {
+                    var max = wrap.scrollWidth - wrap.clientWidth;
+                    prev.classList.toggle("is-hidden", wrap.scrollLeft <= 2);
+                    next.classList.toggle("is-hidden", wrap.scrollLeft >= max - 2);
+                }
+
+                wrap.addEventListener("scroll", update, { passive: true });
+                window.addEventListener("resize", update);
+                var img = wrap.querySelector("img");
+                if (img) { img.addEventListener("load", update); img.addEventListener("dragstart", function (e) { e.preventDefault(); }); }
+
+                // Rotella verticale del mouse -> scorrimento orizzontale
+                wrap.addEventListener("wheel", function (e) {
+                    if (wrap.scrollWidth > wrap.clientWidth && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                        e.preventDefault();
+                        wrap.scrollLeft += e.deltaY;
+                    }
+                }, { passive: false });
+
+                // Trascinamento col mouse
+                var dragging = false, startX = 0, startLeft = 0;
+                wrap.addEventListener("pointerdown", function (e) {
+                    if (e.pointerType !== "mouse" || e.button !== 0) return;
+                    dragging = true;
+                    startX = e.clientX;
+                    startLeft = wrap.scrollLeft;
+                    wrap.classList.add("is-dragging");
+                });
+                window.addEventListener("pointermove", function (e) {
+                    if (dragging) wrap.scrollLeft = startLeft - (e.clientX - startX);
+                });
+                window.addEventListener("pointerup", function () {
+                    dragging = false;
+                    wrap.classList.remove("is-dragging");
+                });
+
+                update();
+            });
+
+            // Ogni volta che si apre un modale, la striscia riparte dall'inizio
+            document.querySelectorAll(".modal").forEach(function (modal) {
+                modal.addEventListener("shown.bs.modal", function () {
+                    var wrap = modal.querySelector(".horizontal-scroll-wrapper");
+                    if (!wrap) return;
+                    wrap.scrollLeft = 0;
+                    wrap.dispatchEvent(new Event("scroll"));
+                });
+            });
+        })();
+    </script>
 </body>
+</html>

@@ -1,0 +1,568 @@
+// ===== HOME =====
+.home-stage {
+    position: relative;
+    max-width: 1440px;
+    margin-inline: auto;
+    overflow-x: clip;
+}
+
+// ---------- Hero ----------
+.hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+    align-items: center;
+    padding: 120px 0 0 4%;
+
+    .hero-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-text {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        // padding: 0 4% 0 3%;
+        margin-top: -6%;
+
+        h1 {
+            font-family: $font-display;
+            font-size: 94px;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-subtitle {
+            font-family: $font-display;
+            font-size: 49px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-lead {
+            font-family: $font-display;
+            font-size: 29px;
+            margin: 0 auto 1rem;
+            line-height: 1;
+        }
+
+        .hero-description {
+            font-family: $font-body;
+            font-size: 18px;
+            margin: 0 auto 2.5rem;
+            max-width: 52ch;
+            color: rgba($cream, 0.88);
+        }
+    }
+
+    .hero-cta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+    }
+}
+
+// ---------- Cascata di vernice + tre "finestre" ----------
+.home-flow {
+    position: relative;
+    z-index: 3; // Manteniamo la vernice sopra ai contenuti base ma sotto i layer interattivi se necessario
+    width: 98%;
+    margin: -23% auto -8%;
+    aspect-ratio: 1998.24 / 3171.84;
+    pointer-events: none;
+
+    .flow-paint {
+        position: absolute;
+        inset: 0;
+        z-index: 2; // La vernice copre i bordi delle card facendole stare "sotto"
+        margin: 0;
+        pointer-events: none;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .flow-window {
+        position: absolute;
+        z-index: 1; // Sotto la vernice grafica
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        pointer-events: auto;
+    }
+
+    .flow-craft { top: 15.5%; height: 23%; left: 7%; right: 11%; }
+    .flow-path  { top: 43%;   height: 21.5%; left: 12%; right: 12%; }
+    .flow-works { top: 69.5%; height: 22%; left: 12%; right: 12%; }
+
+    h2 { 
+        margin-bottom: clamp(0.6rem, 1.5vw, 1.4rem); 
+        position: relative;
+        z-index: 4;
+    }
+}
+
+// ---------- The Craft & Gear ----------
+.craft-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.2%;
+    width: 100%;
+    max-width: 960px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top:50px;
+    position: relative;
+    z-index: 4;
+
+    .craft-item {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        border-bottom: 2px solid $teal-bright;
+        border-right: 2px solid $teal-bright;
+        box-shadow: 3px 3px 12px rgba($cream, 0.35);
+        background: $surface;
+        cursor: pointer;
+
+        .craft-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .craft-text {
+            position: absolute;
+            inset: 0;
+            padding: 1rem 0.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $cream;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+
+
+            p {
+                font-size: 17px;
+                line-height: 1.35;
+                margin: 0;
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                .craft-img { opacity: 0; }
+                .craft-text { opacity: 1; z-index: 3; }
+            }
+        }
+    }
+}
+
+// Tool Icons
+.tool-icons-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: clamp(2.5rem, 4.5vw, 4.2rem);
+    padding: 0.4rem 0;
+    position: relative;
+    z-index: 4;
+}
+
+.tool-icons {
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 3.5vw, 42px);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+
+    &.auto-scroll {
+        animation: toolsMarquee 22s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    img {
+        display: block;
+        height: clamp(42px, 4.8vw, 62px);
+        width: auto;
+        filter: drop-shadow(0 0 6px rgba($cream, 0.25));
+    }
+}
+
+@keyframes toolsMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+// ---------- Strategic Path ----------
+.path-intro {
+    font-size: 24px;
+    margin: 0 auto clamp(1rem, 2.2vw, 2rem);
+    position: relative;
+    z-index: 4;
+}
+
+.path-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.8rem, 2.4vw, 2.4rem);
+    width: 100%;
+    max-width: 880px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 4;
+}
+
+.path-card {
+    height: 100%;
+    padding: clamp(0.7rem, 1.4vw, 1.3rem);
+    background: $bg;
+    border: 2px solid rgba($cream, 0.8);
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba($cream, 0.28);
+
+    h3 { font-size: 24px; margin-bottom: 0.5rem; }
+    p  { font-size: 18px; margin: 0 auto; line-height: 1.45; }
+}
+
+.path-link {
+    margin: clamp(1rem, 2vw, 1.8rem) 0 0;
+    font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+    position: relative;
+    z-index: 4;
+
+    a {
+        font-family: $font-display;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+
+        &:hover { color: $teal-bright; }
+    }
+}
+
+// ---------- Selected Works ----------
+.works-cards {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    position: relative;
+    z-index: 4;
+
+    li {
+        position: relative;
+    }
+
+    .work-item-container {
+        position: relative;
+        display: block;
+        border-radius: 12px;
+
+        img {
+            display: block;
+            width: clamp(140px, 18vw, 260px);
+            height: auto;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s;
+        }
+
+        &:hover img {
+           transform: translateY(-8px) scale(1.05);
+           filter: drop-shadow(0 0 16px rgba($cream, 0.6));
+        }
+    }
+
+    .btn-info-toggle {
+        display: none; 
+    }
+
+    .work-card__info {
+        position: absolute;
+        left: 6%;
+        right: 6%;
+        bottom: 6%;
+        padding: 0.6rem 0.7rem;
+        background: rgba($bg, 0.95);
+        border: 1px solid rgba($cream, 0.5);
+        border-radius: 8px;
+        font-size: 18px;
+        line-height: 1.35;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(6px);
+        pointer-events: none;
+        transition: opacity 0.25s, transform 0.25s;
+
+        strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            font-family: $font-display;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        li:hover .work-card__info {
+            opacity: 1;
+            transform: none;
+            pointer-events: auto;
+        }
+    }
+}
+
+// ---------- Mobile / Tablet ----------
+@include down($bp-lg) {
+    
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 105px 20px 0;
+        gap: 1.5rem;
+
+        .hero-visual {
+            max-width: 560px;
+            width: 100%;
+            margin-inline: auto;
+        }
+
+        .hero-text { margin-top: 0; padding: 0; 
+            h1 { font: size 16px;}
+            .hero-subtitle { font-size: 35px;}
+            .hero-lead { font-size: 24px;}
+            .hero-description { font-size: 16px;}
+        }
+    }
+
+    .home-flow {
+        aspect-ratio: 1 / 7.4;
+        width: 100%;
+        margin: 1rem 0 -45%;
+        overflow: hidden;
+
+        .flow-paint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            inset: 0 auto auto 0;
+            transform-origin: 50% 0;
+            transform: scale(1.55, 1.72);
+            z-index: 5; // Vernice in primo piano rispetto alle card per dare l'effetto "sotto il liquido"
+            pointer-events: none;
+        }
+
+        // Finestre ristrette e ben centrate per rispettare i margini interni della vernice in mobile
+        .flow-craft { 
+            top: 10.5%;   
+            height: 20.5%; 
+            left: 14%; 
+            right: 14%; 
+            align-items: center;
+            z-index: 2;
+        }
+        
+        .flow-path  { 
+            top: 27%; 
+            height: 36%;   
+            left: 15%; 
+            right: 5%; 
+            align-items: center;
+            z-index: 2;
+        }
+        
+        .flow-works { 
+            top: 59%; 
+            height: 20%;   
+            left: 14%; 
+            right: 14%; 
+            align-items: center;
+            z-index: 2;
+        }
+
+        // Titoli più grandi in mobile come richiesto
+        h2 { 
+            font-size: 42px;
+            margin-bottom: 1.2rem; 
+        }
+    }
+
+
+
+
+    // --- Mobile: Craft Cards (Centrate, sotto la vernice, scorrimento fluido) ---
+    .craft-cards {
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        width: 100%;
+        padding: 10px 10px;
+        margin: 80px 0;
+        scrollbar-width: none;
+        &::-webkit-scrollbar { display: none; }
+
+        .craft-item {
+            flex: 0 0 85%;
+            max-width: 270px;
+            scroll-snap-align: center;
+            margin: 0;
+
+            .craft-text {
+                opacity: 0;
+                pointer-events: none;
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.35;
+                }
+            }
+
+            &.show-craft-info {
+                .craft-img { opacity: 0; }
+                .craft-text { opacity: 1; z-index: 3; pointer-events: auto; }
+            }
+        }
+    }
+
+
+    // --- Mobile: Strategic Path (Miglioramento gap e distribuzione verticale) ---
+    .path-title { margin-bottom: 10px; font-size: 42px; }
+    .path-intro {
+        font-size: 16px;
+        margin-bottom: 10px; // Spazio corretto tra il testo introduttivo e le card
+    
+    }
+
+    .path-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; // Aumenta lo spazio verticale (gap) tra un box e l'altro
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 20px; // Spazio corretto tra l'ultimo box e il link finale
+        padding: 0;
+        grid-template-columns: none; // Annulla la griglia desktop
+    }
+
+    .path-card { 
+        width: 100%;
+        padding: 0.5rem 0.4rem; // Ottimizza il riempimento interno dei box
+
+        h3 { 
+            font-size: 30px; 
+            margin-bottom: 0; 
+        }
+        
+        p { 
+            font-size: 16px; 
+            line-height: 1.4;
+            margin: 0;
+        }
+    }
+
+    .path-link {
+        margin-top: 0.2; // Spazio corretto sotto l'ultimo box prima del link finale
+        font-size: 16px;
+    }
+    
+    // --- Mobile: Selected Works (Centrate, sotto la vernice, tasto "i" attivo) ---
+    .works-cards {
+        display: flex;
+        justify-content:flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        width: 100%;
+        padding: 80px 10px;
+        margin-left: 60px;
+        scrollbar-width: none;
+        &::-webkit-scrollbar { display: none; }
+
+        .work-li-item {
+            flex: 0 0 85%;
+            max-width: 270px;
+            scroll-snap-align: center;
+            margin: 0;
+        }
+
+        .work-item-container img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .btn-info-toggle {
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 20;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba($bg, 0.92);
+            border: 3px solid $cream;
+            color: $cream;
+            font-size: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .work-card__info {
+            display: block;
+            opacity: 0;
+            transform: translateY(6px);
+            pointer-events: none;
+        }
+
+        .work-li-item.show-info .work-card__info {
+            opacity: 1;
+            transform: none;
+            pointer-events: auto;
+        }
+    }
+
+    .path-cards {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .path-card { 
+        padding: 1.1rem 1.2rem; 
+        p { font-size: 16px;}
+    }
+
+    #footer-home {
+        margin-top: -45rem !important; // <--- Eccolo ancora qui dentro!
+        padding-bottom: 0;
+    }
+
+}

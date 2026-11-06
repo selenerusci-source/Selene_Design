@@ -1,53 +1,32 @@
+// ===== CV =====
+.curriculum {
+    color: $sand;
+    padding: 0 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.curriculum{
-  color: rgb(223, 217, 180);
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;      // ok: centra orizzontalmente
-  justify-content: flex-start; // <-- questa è la chiave
-  margin-bottom: 50px;
-}
-
-// .curriculum{
-//     color: rgb(223, 217, 180);
-//     padding: 50px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     margin-bottom: 50px;
-// }
-
-.curriculum h1{
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-.text-content {
-    // padding: 20px 30px;
-    // margin: 50px 350px;
-    // box-shadow: 0 0 10px;
-    // border-color: 2px solid rgb(223, 217, 180);
-    // border-radius: 15px;
-    // backdrop-filter: blur(10px);  
-    // color: rgb(223, 217, 180);
-}
-
-.text-content-cv{
-  padding: 20px 30px;
-  margin: 30px auto;        // spazio sopra/sotto, centrato
-  width: min(720px, 100%);  // max 720px, su schermi piccoli 100%
-  box-shadow: 0 0 10px;
-  border: 2px solid rgb(223, 217, 180); // qui avevi scritto border-color: 2px solid...
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  color: rgb(223, 217, 180);
-}
-
-
-@media(max-width: 768px){
-    .text-content{
-       margin: 50px 50px; 
+    h1 {
+        margin: 40px 0 40px;
+        text-align: center;
     }
+}
+
+.text-content-cv {
+    width: min(720px, 100%);
+    margin: 0 auto 2rem;
+    padding: 1.6rem 2rem;
+    background: $surface;
+    border: 2px solid $sand;
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba($cream, 0.28);
+    color: $sand;
+
+    h2 {
+        font-size: clamp(1.5rem, 2.4vw, 2rem);
+        margin-bottom: 1rem;
+    }
+
+    p { margin-bottom: 0.8rem; max-width: none; }
+    p:last-child { margin-bottom: 0; }
 }

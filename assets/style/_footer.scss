@@ -1,20 +1,71 @@
+// ===== Footer nuovo: "Follow for more" + social + link =====
+.site-footer {
+    text-align: center;
+    padding: 90px 20px 60px;
 
+    .footer-title {
+        font-size: clamp(1.5rem, 2.6vw, 2rem);
+        margin-bottom: 1rem;
+    }
+}
 
-.footer-container{
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        color: $cream;
+        font-size: 1.25rem;
+        text-decoration: none;
+        transition: transform 0.2s;
+
+        &:hover { transform: translateY(-3px); }
+    }
+
+    img { width: 22px; height: 22px; display: block; }
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 2.2rem;
+
+    a {
+        font-family: $font-display;
+        font-size: 1.05rem;
+        color: $cream;
+        text-decoration: none;
+        padding: 0.25rem 0;
+        border-bottom: 2px solid transparent;
+
+        &:hover,
+        &[aria-current="page"] { border-bottom-color: $cream; }
+    }
+}
+
+// ===== Footer "vecchio" (collassabile): lo tengo per le pagine progetto non ancora migrate =====
+.footer-container {
     position: relative;
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
 
-/*stile footer:*/
-
-.custom-footer{
-    background-color: rgb(28, 45, 49);
-    padding-top:30px;
-    color: rgb(244, 245, 208);
+.custom-footer {
+    background-color: $surface;
+    padding-top: 30px;
+    color: $cream;
 }
 
-/*posiione pulsante*/
-.footer-toggler{
+.footer-toggler {
     position: absolute;
     top: 0;
     left: 50%;
@@ -22,28 +73,29 @@
     z-index: 999;
 }
 
-/*stile pulsante*/
-.btn-custom-mimic{
-    --bs-btn-bg: rgb(28, 45, 49);
-    --bs-btn-border-color: rgb(28, 45, 49);
-    --bs-btn-hover-color: rgb(244, 245, 208);
-    --bs-btn-hover-bg: rgb(28, 45, 49);
-    --bs-btn-hover-border-color: rgb(28, 45, 49);
-    --bs-btn-active-bg: rgb(28, 45, 49);
-    --bs-btn-active-border-color: rgb(28, 45, 49);
+.btn-custom-mimic {
+    --bs-btn-bg: #{$surface};
+    --bs-btn-border-color: #{$surface};
+    --bs-btn-hover-color: #{$cream};
+    --bs-btn-hover-bg: #{$surface};
+    --bs-btn-hover-border-color: #{$surface};
+    --bs-btn-active-bg: #{$surface};
+    --bs-btn-active-border-color: #{$surface};
     border-radius: 50px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
-/*stile icona*/
-.collapse-toggle-icon{
-    color: rgb(244, 245, 208);
+.collapse-toggle-icon {
+    color: $cream;
     transition: transform 0.3s ease;
 }
 
- /*stile icona aperta*/
- .footer-toggler button[aria-expanded="true"] 
- .collapse-toggle-icon{
+.footer-toggler button[aria-expanded="true"] .collapse-toggle-icon {
     transform: rotate(180deg);
-    color: rgb(244, 245, 208);
- }
+}
+
+.custom-footer .socials img {
+    width: 32px;
+    height: 32px;
+    margin: 30px;
+}

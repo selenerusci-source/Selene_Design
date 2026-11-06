@@ -1,120 +1,88 @@
-#inP-title{
-    font-size: 84px;
+// ===== Classi "inP" ancora usate dalle pagine progetto non migrate =====
+#inP-title {
+    font-size: clamp(2.6rem, 6vw, 5.25rem);
     padding-top: 100px;
-    @media (max-width:768px){
-        font-size: 54px;
-    }
 }
 
-.more-card-inP{
-    color: rgb(223, 217, 180);
+.more-card-inP {
+    color: $sand;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
-    // margin-bottom: 100px;
-    .cards-wrapper-inP{
+
+    .cards-wrapper-inP {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: stretch;
-        margin-top: 50px;
-        gap: 50px;
-        margin-bottom: 50px;
+        margin: 50px 0;
+        gap: 2rem;
         width: 100%;
         max-width: 1200px;
     }
-    .text-content-inP{
+
+    .text-content-inP {
         flex: 1 1 0;
-        padding: 20px;
+        padding: 1.4rem;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        box-shadow: 0 0 10px;
-        border-color: 2px solid rgb(223, 217, 180);
-        border-radius: 30%;
-        backdrop-filter: blur(10px); 
-    }
-    h2{
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-    p{
-        font-size: 14px;
-        margin: 0;
-        line-height: 1.4;
-        // text-align: center;
+        background: $surface;
+        border: 1px solid rgba($cream, 0.2);
+        border-right: 3px solid rgba($sand, 0.8);
+        border-bottom: 3px solid rgba($sand, 0.8);
+        border-radius: 6px;
     }
 
-    @media (max-width:768px){
-        .cards-wrapper-inP{
-        flex-direction: column; // Mobile: card una sotto l'altra
-        align-items: center;
-        }
-        
-        .text-content-inP {
-            width: 100%; // Le card prendono tutta la larghezza disponibile
-            max-width: 400px;
-            flex: none;
-        }            
-        h2{
-            font-size: 22px;
-        }
-        p{
-            font-size: 11px;
-        }
+    h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+    p  { font-size: 0.9rem; margin: 0; line-height: 1.5; }
 
+    @include down($bp-md) {
+        .cards-wrapper-inP { flex-direction: column; align-items: center; }
+        .text-content-inP { width: 100%; max-width: 400px; flex: none; }
     }
 }
 
 .scroll-arrow {
-  margin: 48px auto 20px;
-  padding-bottom: 100px;
-  text-align: center;
+    margin: 48px auto 20px;
+    padding-bottom: 60px;
+    text-align: center;
 
-  i {
-    font-size: 68px;     // 👈 MOLTO PIÙ GRANDE
-    color: rgb(223, 217, 180);      // cambia colore qui
-    animation: float 1.6s ease-in-out infinite;
-  }
+    i {
+        font-size: 56px;
+        color: $sand;
+        animation: float 1.6s ease-in-out infinite;
+    }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
-
 
 .road-wrapper-inP {
     display: flex;
     flex-direction: column;
-    align-items: center; // Centra tutto il contenuto
-    background-color: rgb(15, 33, 37);
-    padding-bottom: 0;
-    color: rgb(244, 245, 208);
+    align-items: center;
+    background-color: $bg;
+    color: $cream;
+
     .journey-title-inP {
-        font-size: 84px;
-        font-weight: 300;
-        margin: 40px 0 20px 0;
-        padding-bottom: 100px;
-        @media (max-width:768px){
-            font-size: 54px;
-        }
+        font-size: clamp(2.6rem, 6vw, 5rem);
+        font-weight: 400;
+        margin: 40px 0 20px;
+        padding-bottom: 60px;
     }
 }
 
 .road-container-inP {
     position: relative;
-    /* IMPORTANTE: Questo limita quanto la strada può diventare grande */
     width: 100%;
-    max-width: 800px; 
+    max-width: 800px;
     margin: 0 auto;
-    padding-top: 80px; // Spazio sopra e sotto l'immagine della strada
+    padding-top: 80px;
 
     .road-image-inP {
         width: 100%;

@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selene's Design</title>
-    <meta name="description" content="first website created with HTML, CSS, SASS and Bootstrap">
+    <title>Portfolio | Selene's Design</title>
+    <meta name="description" content="Portfolio of Selene, UX/UI & Product Designer">
     <meta property="og:title" content="portfolio">
     <meta property="og:description" content="my portfolio">
     <meta property="og:image" content="#">
     <meta property="og:url" content="#">
-    <meta property="og:type" content="website">   
+    <meta property="og:type" content="website">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/style/style.css">
-    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/new_img/Favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
 </head>
-
-
 <body>
 
-   <nav class="navbar fixed-top bg">
+    <nav class="navbar fixed-top" aria-label="Main navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Selene's website</a>
+            <a class="navbar-brand" href="../index.html" aria-label="Selene's Design, home">
+                <img src="../assets/img/new_img/Favicon.svg" alt="" width="38" height="34">
+            </a>
 
             <ul class="navbar-nav desktop-nav ms-auto d-none d-md-flex flex-row gap-4">
                 <li class="nav-item">
@@ -35,283 +34,136 @@
                     <a class="nav-link" href="../about/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../cv/cv.html">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
+                    <a class="nav-link" href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
                 </li>
             </ul>
 
-            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Open menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../about/about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../cv/cv.html">CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../portfolio/portfolios.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </nav>
 
-    <main>
+    <!-- Menu mobile: a tutto schermo, fuori dalla navbar (così non resta intrappolato nel suo riquadro) -->
+    <div class="offcanvas offcanvas-top d-md-none" tabindex="-1" id="offcanvasNavbar" aria-label="Menu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contatti/contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <main class="page-main portfolio-page">
+        <h1 class="visually-hidden">My Portfolio</h1>
 
-            <!-- Commissioned Project -->
+        <img class="portfolio-wool" src="../assets/img/new_img/woolP.svg" alt="">
 
+        <div class="filter-bar" role="group" aria-label="Filter projects">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-btn" data-filter="b2b" aria-pressed="false">B2B/B2C</button>
+            <button type="button" class="filter-btn" data-filter="saas" aria-pressed="false">Saas</button>
+            <button type="button" class="filter-btn" data-filter="redesign" aria-pressed="false">Redesign</button>
+            <button type="button" class="filter-btn" data-filter="game" aria-pressed="false">Game</button>
+        </div>
 
-        <section>
-            <h1 class="prt-title">My Portfolio</h1>
-            <h2 class="school-proj">B2C/B2B</h2>
+        <ul class="project-grid">
+            <li data-category="b2b">
+                <a class="project-card" href="./Caffeinated-ink.html">
+                    <img src="../assets/img/new_img/Card-caffeinated.webp" alt="Caffeinated Ink" width="380" height="607">
+                    <span class="project-card__info"><strong>Caffeinated Ink</strong>Conversion-driven website &amp; admin system for a real coffee &amp; tattoo business. From IA strategy to a production-ready dashboard.</span>
+                </a>
+            </li>
+            <li data-category="saas">
+                <a class="project-card" href="./ai-team.html">
+                    <img src="../assets/img/new_img/Card-AITeam.webp" alt="Team AI" width="380" height="607">
+                    <span class="project-card__info"><strong>Team AI</strong>Product concept for a multi-agent AI workspace designed to accelerate complex professional workflows. Personal project, currently in progress.</span>
+                </a>
+            </li>
+            <li data-category="b2b game">
+                <a class="project-card" href="./illustrated-personal-website.html">
+                    <img src="../assets/img/new_img/Card-Adele.webp" alt="Personal Website" width="380" height="607">
+                    <span class="project-card__info"><strong>Personal Website</strong>A street. A character. A snake to shoot. And somewhere in there, a full UX case study waiting to be found.</span>
+                </a>
+            </li>
+            <li data-category="redesign">
+                <a class="project-card" href="./art-house-project.html">
+                    <img src="../assets/img/new_img/Card-TAH.webp" alt="The Art House Project" width="380" height="607">
+                    <span class="project-card__info"><strong>The Art House Project</strong>UX/UI redesign of a charity website to improve course discovery, comparison and conversion.</span>
+                </a>
+            </li>
+            <li data-category="redesign">
+                <a class="project-card" href="./buddify-project.html">
+                    <img src="../assets/img/new_img/Card-buddhify.webp" alt="Buddhify" width="380" height="607">
+                    <span class="project-card__info"><strong>Buddhify</strong>UX/UI redesign of 5 key pages, improving navigation, content hierarchy and accessibility.</span>
+                </a>
+            </li>
+            <li data-category="redesign">
+                <a class="project-card" href="./lmsc.html">
+                    <img src="../assets/img/new_img/Card-LMSC.webp" alt="LMSC Project" width="380" height="607">
+                    <span class="project-card__info"><strong>LMSC Project</strong>First UX project: redesign of a food waste reduction app. Project presentation in progress, Figma prototype available.</span>
+                </a>
+            </li>
+        </ul>
 
-            <div class="prt-cards d-none d-md-flex">
-
-                <div class="prt-card-1" data-tooltip="Conversion-driven website & admin system for a real coffee & tattoo business. From IA strategy to a production-ready dashboard.">
-                    <a href="./Caffeinated-ink.html">
-                        <img src="../assets/img/caffeinated-ink-img/portfolio.ink.svg" alt="coffee and tattoo shop website">
-                    </a>
-                </div>                
-
-                <div class="prt-card-2" data-tooltip="A street. A character. A snake to shoot. And somewhere in there, a full UX case study waiting to be found.">
-                    <a href="./illustrated-personal-website.html">
-                        <img src="../assets/img/project 3 - Adele/CardG.png" alt="Personal website">
-                    </a>
-                </div>
-
-
-
+        <div class="portfolio-foot">
+            <div class="foot-art">
+                <img class="foot-cat" src="../assets/img/new_img/CatP.svg" alt="A fluffy grey cat sleeping with its chin on two teal paws">
+                <img class="foot-wool" src="../assets/img/new_img/Woolp2.svg" alt="">
             </div>
-
-            <div id="commissionedCarousel" class="carousel slide carousel-fade d-md-none" data-bs-interval="false">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <div class="mobile-card-container">
-                            <a href="./Caffeinated-ink.html">
-                                <img src="../assets/img/caffeinated-ink-img/portfolio.ink.svg" class="d-block mx-auto" alt="caffeinated ink">
-                            </a>
-                            <div class="mobile-card-info">
-                                <h3>Caffeinated Ink</h3>
-                                <p>Conversion-driven website & admin system <br>for a real coffee & tattoo business. <br>From IA strategy to a production-ready dashboard.</p>
-                            </div>
-                        </div>
-                    </div>
-          
-                    <div class="carousel-item">
-                        <div class="mobile-card-container">
-                            <a href="./illustrated-personal-website.html">
-                                <img src="../assets/img/project 3 - Adele/CardG.png" class="d-block mx-auto" alt="dev personal website hero img">
-                            </a>
-                            <div class="mobile-card-info">
-                                <h3>Personal Website</h3>
-                                <p>A street. A character. A snake to shoot. And somewhere in there, a full UX case study waiting to be found.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#commissionedCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#commissionedCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-
-        </section>
-
-
-
-        <!-- Personal Projects -->
-
-        <section class="mb-5 pb-5 mt-5 pt-5">
-            
-            <h2 class="school-proj">SaaS</h2>
-
-            <div class="prt-cards d-none d-md-flex">
-
-                <div class="prt-card-1" data-tooltip="Product concept for a multi-agent AI workspace designed to accelerate complex professional workflows. Personal project, currently in progress.">
-                    <a href="./ai-team.html">
-                        <img src="../assets/img/portfolio-cards/ai-team-card.svg" alt="personal project">
-                    </a>
-                </div>                
-
-
-            </div>
-
-            <div id="personalCarousel" class="carousel slide carousel-fade d-md-none" data-bs-interval="false">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <div class="mobile-card-container">
-                            <a href="./ai-team.html">
-                                <img src="../assets/img/portfolio-cards/ai-team-card.svg" class="d-block mx-auto" alt="The Art House">
-                            </a>
-                            <div class="mobile-card-info">
-                                <h3>Team AI</h3>
-                                <p>Product concept for a multi-agent AI workspace <br> designed to accelerate complex professional workflows. <br>Personal project, currently in progress.</p>
-                            </div>
-                        </div>
-                    </div>
-          
-
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#personalCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#personalCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-
-        </section>
-
-
-            <!-- academics projects -->
-
-            <section >
-            
-            <h2 class="school-proj">Redesign</h2>
-
-            <div class="prt-cards d-none d-md-flex">
-
-                <div class="prt-card-1" data-tooltip="UX/UI redesign of a charity website to improve course discovery, comparison and conversion.">
-                    <a href="./art-house-project.html">
-                        <img src="../assets/img/card.art-house-correct.svg" alt="Redisign project of an Artistic charity assosetion website">
-                    </a>
-                </div>                
-
-                <div class="prt-card-2" data-tooltip="UX/UI redesign of 5 key pages, improving navigation, content hierarchy and accessibility.">
-                    <a href="./buddify-project.html">
-                        <img src="../assets/img/Buddhify-card.svg" alt="Redesign project of Buddhify website, showing card">
-                    </a>
-                </div>
-
-                <div class="prt-card-3" data-tooltip="First UX project: redesign of a food waste reduction app. Project presentation in progress, Figma prototype available.">
-                    <a href="./lmsc.html" target="_blank">
-                        <img src="../assets/img/carousel-lmsc-card.svg" alt="Redesign project of LMSC website, showing card">
-                    </a>
-                </div>
-
-            </div>
-
-            <div id="academicsCarousel" class="carousel slide carousel-fade d-md-none" data-bs-interval="false">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <div class="mobile-card-container">
-                            <a href="./art-house-project.html">
-                                <img src="../assets/img/card.art-house-correct.svg" class="d-block mx-auto" alt="The Art House">
-                            </a>
-                            <div class="mobile-card-info">
-                                <h3>The Art House Project</h3>
-                                <p>UI/UX redesign of a charity website to improve course discovery, comparison and conversion.</p>
-                            </div>
-                        </div>
-                    </div>
-          
-                    <div class="carousel-item">
-                        <div class="mobile-card-container">
-                            <a href="./buddify-project.html">
-                                <img src="../assets/img/Buddhify-card.svg" class="d-block mx-auto" alt="Buddhify">
-                            </a>
-                            <div class="mobile-card-info">
-                                <h3>Buddhify</h3>
-                                <p>UI/UX redesign of 5 key pages, improving navigation, content hierarchy and accessibility.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="mobile-card-container">
-                            <a href="./lmsc.html">
-                                <img src="../assets/img/carousel-lmsc-card.svg" class="d-block mx-auto" alt="LMSC">
-                            </a>
-                            <div class="mobile-card-info">
-                                <h3>LMSC Project</h3>
-                                <p>First UX project: redesign of a food waste reduction app. Project presentation in progress, Figma prototype available.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#academicsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#academicsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-
-        </section>
-
-        
+            <a class="btn-site btn-site--solid" href="../cv/cv.html">View CV</a>
+        </div>
     </main>
 
-
-        <div class="footer-container">
-    <div class="footer-toggler">
-        <button class="btn btn-sm btn-custom-mimic" type="button" data-bs-toggle="collapse" data-bs-target="#footerCollapse" aria-expanded="false" aria-controls="footerCollapse">
-            <i class="fas fa-chevron-up collapse-toggle-icon"></i>
-        </button>
-    </div>
-
-    <footer class="custom-footer">
-        <div class="container">
-            <div class="text-center"> 
-                <h4 class="foot-ttl mb-5"><strong>Reach out</strong> if you want to find out more!</h4>
-            </div>
-            <div class="collapse" id="footerCollapse">
-                
-                <div class="socials d-flex justify-content-center align-items-center flex-row">
-
-                    <div>
-                        <a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">
-                        <img src="../assets/img/linkedin-icon.svg" alt="linkedin link icon" style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.instagram.com/_.selene_design._/" target="_blank">
-                       <img src="../assets/img/insta-icon.svg" alt="instagram link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                       </a>
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank">
-                        <img src="../assets/img/fb-icon.svg" alt="facebook link icon"  style="width: 32px; height: 32px; margin: 30px;">
-                        </a>
-                    </div> 
-                </div>
-            </div>
-        </div>
+    <footer class="site-footer">
+        <h2 class="footer-title">Follow for more</h2>
+        <ul class="footer-social">
+            <li><a href="https://www.facebook.com/profile.php?id=61582505728116" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/_.selene_design._/" target="_blank" rel="noopener" aria-label="Instagram"><img src="../assets/img/new_img/insta-icon.svg" alt=""></a></li>
+            <li><a href="https://www.linkedin.com/in/selene-ruscica-20b298281?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../assets/img/new_img/linkedin-icon.svg" alt=""></a></li>
+        </ul>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="../index.html">Home</a>
+            <a href="../about/about.html">About</a>
+            <a href="../portfolio/portfolios.html" aria-current="page">Portfolio</a>
+            <a href="../contatti/contacts.html">Contacts</a>
+        </nav>
     </footer>
-    </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <script>
+        // Filtri del portfolio
+        (function () {
+            var buttons = document.querySelectorAll(".filter-btn");
+            var items = document.querySelectorAll(".project-grid li");
+            buttons.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    var filter = btn.dataset.filter;
+                    buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+                    items.forEach(function (li) {
+                        var show = filter === "all" || li.dataset.category.split(" ").indexOf(filter) !== -1;
+                        li.hidden = !show;
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
+</html>

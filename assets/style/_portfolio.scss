@@ -1,151 +1,190 @@
-
-
-.prt-title{
-    margin-top: 200px;
-    margin-bottom: 100px;
-    color: rgb(244, 245, 208);
-    text-align: center;
-    font-size: 84px;
-    @media (max-width: 768px){
-        font-size: 54px;
-    }
-}
-
-.school-proj{
-    color:  rgb(244, 245, 208);
-    text-align: center;
-    padding-bottom: 50px;
-    font-size: 56px;
-    @media(max-width: 767px){
-        font-size: 31px;
-        padding-bottom: 0;
-        padding-top: 30px;
-    }
-}
-
-/* --- DESKTOP --- */
-
-.prt-cards {
-    display: flex;
-    align-items: flex-start; // Allinea in alto
-    justify-content: center;
-    gap: 30px;               // Spazio uniforme tra le card
-    flex-wrap: wrap;         // Evita sovrapposizioni se restringi la finestra
-    margin-top: 50px;
-}
-
-[class^="prt-card-"] {
+// ===== PORTFOLIO =====
+.portfolio-page {
     position: relative;
-    transition: transform 0.3s ease;
-    width: 220px;
-    height: 370px;
-    flex-shrink: 0; // Impedisce alla card di schiacciarsi
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: 0 24px;
+}
 
-    // CORREZIONE FONDAMENTALE: Forza l'immagine nel box
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding-bottom: 1.2rem;
+    margin-bottom: 2.6rem;
+    border-bottom: 1px solid rgba($cream, 0.35);
+    position: relative;
+    z-index: 2;
+}
+
+.filter-btn {
+    font-family: $font-display;
+    font-size: 18px;
+    color: $cream;
+    background: transparent;
+    border: 1px solid rgba($cream, 0.7);
+    border-radius: 999px;
+    padding: 0.35rem 1.4rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background-color 0.2s;
+
+    &:hover { background: rgba($cream, 0.1); }
+
+    &[aria-pressed="true"] {
+        background: rgba($cream, 0.1);
+        box-shadow: 0 0 12px rgba($cream, 0.5);
+    }
+}
+
+// Gomitolo con filo, in alto a destra
+.portfolio-wool {
+    position: absolute;
+    top: 95px;
+    right: 24px;
+    width: clamp(36px, 6vw, 72px);
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.project-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
+    justify-content: center;
+    gap: 2rem 2.4rem;
+    max-width: 800px;
+    margin-inline: auto;
+    list-style: none;
+    padding: 0;
+
+    li[hidden] { display: none; }
+}
+
+.project-card {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.25s;
+
     img {
+        display: block;
         width: 100%;
         height: auto;
-        display: block;
-        border-radius: 12px;
     }
 
-    &::after {
-        content: attr(data-tooltip);
+    .project-card__info {
         position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgb(28, 45, 49);
-        color: rgb(244, 245, 208);
-        padding: 10px 15px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        z-index: 999;
-        white-space: normal;
-        width: 220px;
-        text-align: center;
+        left: 8%;
+        right: 8%;
+        bottom: 6%;
+        padding: 0.8rem 0.9rem;
+        background: rgba($bg, 0.94);
+        border: 1px solid rgba($cream, 0.5);
+        border-radius: 8px;
+        font-size: 0.78rem;
         line-height: 1.4;
+        text-align: center;
         opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
+        transform: translateY(8px);
+        transition: opacity 0.25s, transform 0.25s;
+
+        strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-family: $font-display;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+
+    &:hover,
+    &:focus-visible {
+        transform: translateY(-6px);
+
+        .project-card__info {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+.portfolio-foot {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-top: 5rem;
+
+    .foot-cat { width: clamp(280px, 50vw, 450px); height: auto; display: block; }
+
+    .foot-wool {
+        width: clamp(100px, 15vw, 150px);
+        height: auto;
+        margin-left: -2.5rem;
+        margin-bottom: -0.5rem;
+        align-self: flex-end;
         pointer-events: none;
     }
 
-    &:hover {
-        transform: scale(1.05);
-        &::after {
-            opacity: 1;
-            visibility: visible;
-            bottom: -110px; 
-        }
-    }
+    .foot-art { display: flex; align-items: flex-end; }
+
+    .btn-site { font-size: 18px; padding: 0.4rem 1.1rem; }
 }
 
 
-/* --- SEZIONE MOBILE (Carosello) --- */
-// Usiamo una media query solo per definire lo stile del carosello
+@include down($bp-md) {
+    .portfolio-wool { 
+        margin-top: 80px;
+    }
 
-@media (max-width: 767px) {
-    .mobile-card-container {
-        padding: 40px 0;
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem 1rem;
+    }
+
+    .portfolio-foot {
+        margin-top: 3rem;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        img {
-            width: 200px; // Ora può essere grande!
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+        flex-direction: row; // Assicura che restino in riga
+        align-items: center; // Allineamento verticale pulito
+        justify-content: space-between;
+        gap: 1rem;
     }
 
-    .mobile-card-info {
-        margin-top: 25px;
-        width: 200px;
+    .foot-art {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem; // Spazio naturale tra gatto e gomitolo
+    }
+
+    .foot-cat { 
+        width: clamp(100px, 30vw, 150px); // Dimensione proporzionata per mobile, non troppo piccola
+        height: auto; 
+        display: block; 
+    }
+
+    .foot-wool {
+        width: clamp(45px, 15vw, 65px); // Gomitolo proporzionato accanto al gatto
         height: auto;
-        padding: 15px;
-        background-color: rgb(28, 45,49);
-        border-radius: 8px;
-        color: rgb(244, 245, 208) !important;
-        text-align: center;
-        overflow: visible;
-
-        h3 { 
-            font-size: 1.4rem; 
-            margin-bottom: 10px;
-            font-family: 'Montserrat Alternates', sans-serif;
-            font-weight: bold;
-        }
-
-        p { 
-            font-size: 0.95rem; 
-            line-height: 1.5;
-            opacity: 1;
-        }
-    }
-    
-    // --- FRECCE ---
-    .carousel-control-prev, .carousel-control-next {
-        width: 15%; 
+        margin-left: -1.2rem; // Leggera sovrapposizione naturale come su desktop
+        margin-bottom: -0.2rem;
+        pointer-events: none;
     }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-image: none; // Rimuozione dell'icona di Bootstrap
-        border-style: solid;
-        border-width: 3px 3px 0 0; // Creare la forma a "L"
-        width: 20px;
-        height: 20px;
-        color: rgb(244, 245, 208); 
-        display: inline-block;
+    .btn-site { 
+        font-size: 16px; 
+        padding: 0.4rem 0.9rem; 
+        white-space: nowrap; // Evita che il testo del bottone vada a capo
     }
 
-    .carousel-control-prev-icon {
-        transform: rotate(-135deg); // Ruota la "L" per farla puntare a sinistra
-    }
+    .project-card .project-card__info { display: none; }
 
-    .carousel-control-next-icon {
-        transform: rotate(45deg); // Ruota la "L" per farla puntare a destra
+    .site-footer {
+        margin-top: -4rem; // Riporta su il footer agganciandolo meglio ai flussi di vernice/filo
+        padding-bottom: 2rem;
     }
 }

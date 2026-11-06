@@ -1,320 +1,464 @@
-// project buddyfy
-.project-intro{
-    margin-top: 100px;
-    margin-bottom: 100px;
+// ===== PAGINA PROGETTO (Caffeinated Ink e le altre pagine progetto) =====
+$brand-yellow: $cream;
+
+// ---------- Intestazione ----------
+.project-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
     text-align: center;
-    color: rgb(244, 245, 208);
-    h1{
-        font-size: 56px;
-        margin-bottom: 20px;
-        color: rgb(244, 245, 208);
+
+    .project-title { margin-bottom: 3rem; font-size: 94px; }
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    text-align: left;
+}
+
+.info-card {
+    padding: 1.4rem 1.5rem;
+    margin: 3rem 0;
+    background: $surface;
+    border: 1px solid rgba($cream, 0.18);
+    border-right: 3px solid rgba($sand, 0.8);
+    border-bottom: 3px solid rgba($sand, 0.8);
+    border-radius: 6px;
+
+    h2 { font-size: 54px; margin-bottom: 0.7rem; }
+    p  { font-size: 18px; margin: 0 10px; }
+}
+
+
+// ---------- Under the Hood: carosello ----------
+.under-hood {
+    max-width: 1400px;
+    margin: 6rem auto 0;
+    padding: 0 24px;
+
+    h2 { margin: 3rem 0; text-align: center; font-size: 94px; }
+
+    .carousel {
+        background: rgba(0, 0, 0, 0.4);
+        padding: 3rem 4rem;
+        border-radius: 8px;
     }
-    p{
-        font-size: 28px;
-        line-height: 1.6;
+
+    .hood-slide {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        min-height: 320px;
+
+        .hood-text { 
+            flex: 1;
+            text-align: left;
+            h3 { font-size: 32px; margin-bottom: 1rem; }
+            p  { font-size: 18px; margin-bottom: 1.5rem; line-height: 1.5; } 
+        }
+
+        .hood-visual {
+            flex: 0 0 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img { 
+                width: 100%; 
+                max-width: 450px; 
+                height: auto; 
+                border-radius: 6px;
+            }
+        }
+    }
+
+    // Classi del carosello e delle frecce (da mantenere assolutamente)
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 3rem;
+        opacity: 1;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-image: none;
+        width: 1.1rem;
+        height: 1.1rem;
+        border-style: solid;
+        border-color: $cream;
+        border-width: 3px 3px 0 0;
+    }
+
+    .carousel-control-prev-icon { transform: rotate(-135deg); }
+    .carousel-control-next-icon { transform: rotate(45deg); }
+
+    .carousel-indicators { margin-bottom: -0.4rem; }
+}
+
+
+// ---------- Salta al prototipo ----------
+.proto-jump {
+    margin: 5rem auto 0;
+    text-align: center;
+
+    p { margin: 0 auto 1rem; font-size: 18px; }
+
+    .scroll-arrow {
+        margin: 0 auto 1rem;
+        padding-bottom: 0;
     }
 }
 
-.choose-adventure{
-    color:rgb(244, 245, 208) !important;
-    font-size: 28px;
-    margin-top: 100px !important;
-    text-align: center !important;
-    opacity: 1;
-} 
-
-    .funfact-comments-buddy{
-    display: flex;
-    justify-content: center;
-    gap: 0; 
-    padding: 0 20px;
-    max-width: 1200px;       
-    margin: 0 auto; 
-}
-.fact-card-buddy {
-    flex: 1;                  // Rende le tre card uguali in larghezza
-    border: 2px solid rgba(180, 129, 115, 100); 
-    padding: 20px;
-    text-align: left;         
-    h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: rgb(244, 245, 208); 
-    }
-    
-    p {
-        font-size: 16px;
-        line-height: 1.5;
-        color: rgba(244, 245, 208, 0.8);
-    }
-}
-
-.btn-proto{
-    margin: 20px auto;
-    padding: 10px 20px;
+.btn-proto {
+    display: inline-block;
+    gap: 0.5rem;
+    margin: 0.5rem auto;
+    padding: 0.55rem 1.5rem;
     font-size: 18px;
     font-weight: 600;
-    color: rgba(15, 33, 37);
-    border: 2px solid rgb(15, 33, 37);
+    color: $cream;
+    background-color: $teal;
+    border: 2px solid $teal;
     border-radius: 10px;
-    background-color: rgb(212, 156, 133);
     text-decoration: none;
-    &:hover{
-        color: rgb(212, 156, 133);
-        background-color: rgba(15, 33, 37);
-        border: 2px solid rgb(212, 156, 133);
-    }
-    &.desktop-link{
-        display: inline-block;
-    }
-    &.mobile-link{
-        display: none;
-    }
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover { background: $teal-bright; border-color: $teal-bright; color: $bg; }
+
+    &.mobile-link { display: none; }
 }
 
+// ---------- My journey ----------
 .road-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; // Centra tutto il contenuto
-    background-color: rgb(15, 33, 37);
-    padding-bottom: 0;
-    color: rgb(244, 245, 208);
+    align-items: center;
+    padding: 6rem 20px 0;
+    color: $cream;
+
     .journey-title {
-        font-size: 84px;
-        font-weight: 300;
-        margin: 40px 0 20px 0;
-        padding-bottom: 100px;
+        font-family: $font-display; 
+        font-size: 94px; 
+        margin-bottom: 1rem; 
+        text-align: center; 
     }
-    .journey-subtitle{
-        padding-bottom: 100px;
-        font-size: 28px;
-        text-align: center;
+    .journey-subtitle { 
+        font-family: $font-display;
+        font-size: 30px; 
+        margin-bottom: 4rem; 
+        text-align: center; }
     }
-    .lead{
-        font-size: 28px;
-    }
-}
 
 .road-container {
     position: relative;
-    /* IMPORTANTE: Questo limita quanto la strada può diventare grande */
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 46%) 1fr;
     width: 100%;
-    max-width: 800px; 
-    margin: 0 auto;
-    padding-top: 80px; // Spazio sopra e sotto l'immagine della strada
+    max-width: 1800px;
+    margin: 100px auto;
 
+    // La strada ha le proporzioni dello SVG e dà l'altezza alla griglia (10 righe uguali)
     .road-image {
+        grid-column: 2;
+        grid-row: 1 / span 10;
+        align-self: start;
+        display: block;
         width: 100%;
         height: auto;
-        display: block;
+        pointer-events: none;
     }
+
+    // Percorso con 10 step (es. Illustrated Personal Website): una riga in piu' per la strada
+    &.road-container--10 .road-image { grid-row: 1 / span 11; }
+
+
 }
 
 
+
+// Ogni step occupa una riga; i dispari a destra della strada, i pari a sinistra
 .road-step {
-    position: absolute;
-    width: 450px; // Larghezza totale del blocco
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; // Centra l'icona sopra il contenuto
-    color: rgb(244, 245, 208);
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    color: $cream;
+
+    // Un passo per riga, a zig-zag ai lati della strada
+    @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) { grid-row: #{$i} / span 2; }
+    }
+
+    align-self: center;
+
+    &:nth-of-type(odd)  { grid-column: 3; padding-left: 1.2rem; }
+    &:nth-of-type(even) { grid-column: 1; align-items: flex-end; text-align: right; padding-right: 1.2rem; }
 
     .step-icon {
-        img {
-            width: 80px; 
-            height: 80px;
+        background: none;
+        border: none;
+        padding: 10px 0;
+        cursor: pointer;
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        img { 
+            display: block;
+            width: 96px; 
+            height: 96px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 4px rgba($teal-bright, 0.5)) drop-shadow(0 0 8px rgba($teal-bright, 0.5));
         }
+
+        &:hover { transform: scale(1.12); filter: brightness(1.2); }
     }
 
     .step-content {
         display: flex;
-        align-items: flex-start; // Allinea il numero e il testo in alto
-        text-align: left;
+        align-items: flex-start;
+        gap: 1rem;
     }
 
+    &:nth-of-type(even) .step-content { flex-direction: row-reverse; }
+
     .step-num {
-        font-family: "Zen Antique Soft", serif;
-        font-size: 70px; // Numero grande 
-        font-weight: 100;
-        line-height: 0.8;
-        padding-right: 15px;
-        padding-top: 10px;
+        font-family: $font-display;
+        font-size: 54px;
+        line-height: 0.85;
     }
 
     .step-description {
-        border-left: 2px solid rgba(244, 245, 208, 0.5);// La linea verticale sottile
-        padding-left: 15px;
-        h3 {
-            font-family: "Montserrat", sans-serif;
-            font-size: 28px;
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
-        p {
-            font-size: 14px;
-            line-height: 1.4;
-            opacity: 0.9;
-            margin: 0;
+        h3 { font-size: 24px; margin-bottom: 1rem; }
+        p  { font-size: 18px; line-height: 1.45; margin: 0; opacity: 0.92; max-width: 30ch; }
+    }
+
+    &:nth-of-type(odd)  .step-description { border-left: 2px solid rgba($cream, 0.5); padding-left: 0.9rem; }
+    &:nth-of-type(even) .step-description { border-right: 2px solid rgba($cream, 0.5); padding-right: 0.9rem; }
+}
+
+// ---------- Strada: step che seguono le curve (solo desktop largo, percorsi da 9 o 10 step) ----------
+// Su schermi >= 1200px gli step non stanno piu' su righe regolari ma sono posizionati a mano accanto alle
+// curve, come nel Figma della designer. Tutte le misure sono in "cqw" = 1% della larghezza della strada,
+// cosi' testi e posizioni scalano insieme alla strada e restano agganciati alle curve.
+// Come leggere la mappa: x = bordo sinistro dello step (0 = bordo sinistro della strada, 100 = bordo destro),
+// y = bordo alto dello step (0 = inizio del disegno della strada). Per spostare uno step basta cambiare questi numeri.
+// Lo step 10 (se c'e') sta a sinistra, sul tratto finale della strada. Sotto i 1200px resta lo zig-zag a righe di prima.
+$road-curve-dy: 0;   // sposta TUTTI gli step su/giu' (in cqw) se la strada nel tuo SVG parte piu' in alto/basso
+
+$road-curve-steps: (
+    1: (60, -15),
+    2: (-30.6, 0.6),
+    3: (75.8, 18),
+    4: (-49.7, 41.3),
+    5: (88.0, 58),
+    6: (-48, 78.8),
+    7: (91.2, 100),
+    8: (-48, 130),
+    9: (95.6, 160),
+    10: (-40, 190)
+);
+
+@media (min-width: 1200px) {
+    .road-container {
+        container-type: inline-size;
+        display: block;
+        width: 46%;
+        max-width: 828px;
+
+        .road-image { display: block; width: 100%; height: auto; }
+
+        .road-step {
+            position: absolute;
+            width: max-content;
+            max-width: 52cqw;
+            gap: 0.4cqw;
+
+            @each $i, $pos in $road-curve-steps {
+                &:nth-of-type(#{$i}) {
+                    left: #{nth($pos, 1)}cqw;
+                    top: #{nth($pos, 2) + $road-curve-dy}cqw;
+                }
+            }
+
+            // Tutti gli step uguali: numero | filetto | testo, con l'icona sopra al testo
+            &:nth-of-type(odd), &:nth-of-type(even) {
+                align-items: flex-start;
+                text-align: left;
+                padding: 0;
+
+                .step-content { flex-direction: row; gap: 1.5cqw; }
+                .step-description {
+                    border-left: 2px solid rgba($cream, 0.5);
+                    border-right: none;
+                    padding-left: 1.6cqw;
+                    padding-right: 0;
+                }
+            }
+
+            .step-icon {
+                margin-left: 10cqw;
+                padding: 0;
+                img { width: 10.5cqw; height: 10.5cqw; }
+            }
+
+            .step-num { flex: 0 0 5.2cqw; text-align: right; font-size: clamp(34px, 6cqw, 64px); }
+            .step-description {
+                h3 { font-size: clamp(16px, 2.9cqw, 30px); margin-bottom: 0.8cqw; }
+                p  { font-size: clamp(13px, 2.4cqw, 22px); max-width: 40cqw; }
+            }
         }
     }
 }
 
 .open-proto {
-    top: 30px;
-    left: -80px;
-    position: relative;
+    margin: 3rem 0 2rem;
+    text-align: center;
+
     a {
-        font-size: 28px;
-        font-weight: 600;
-        color: rgba(244, 245, 208) !important;
+        font-family: $font-body;
+        font-size: 18px;
+        color: $cream;
+        text-underline-offset: 5px;
+
+        &:hover { color: $teal-bright; }
     }
-    .mobile-link{
-        display: none;
-    }
-    .desktop-link{
-        display: inline-block;
-    }
+
+    .mobile-link { display: none; }
 }
 
-/* POSIZIONAMENTO MANUALE */
+// Scorrimento esistente dei pagine progetto (mantenuto per le altre pagine)
+.funfact-buddy { margin-top: 3rem; }
 
-.step-1 {
-    top: 10px;       /* Regola l'altezza */
-    right: -100px;   /* Sposta a destra della strada */
+.funfact-comments-buddy {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fact-card-buddy {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid rgba($teal, 0.9);
     text-align: left;
+
+    h3 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+    p  { font-size: 0.95rem; color: rgba($cream, 0.85); }
 }
 
-.step-2 {
-    top: 120px;     
-    left: -200px;    
-    text-align: right;
+.choose-adventure {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
-.step-3 {
-    top: 250px;       
-    right: -175px;   
-    text-align: left;
-}
-
-.step-4 {
-    top: 380px;      
-    left: -350px;    
-    text-align: right;
-}
-
-.step-5 {
-    top: 520px;      
-    right: -280px;    
-    text-align: right;
-}
-
-.step-6 {
-    top: 720px;     
-    left: -350px;    
-    text-align: right;
-}
-
-.step-7 {
-    top: 930px;   
-    right: -280px;   
-    text-align: right;
-}
-
-.step-8 {
-    top: 1130px;     
-    left: -370px;    
-    text-align: right;
-}
-
-.step-9 {
-    top: 1400px;     
-    right: -287px;    
-    text-align: right;
-}
-
-.step-10 {
-    top: 1730px;      
-    left: -330px;    
-    text-align: right;
-}
-
-
-
-/* Stile per i modal */
-$brand-yellow: rgb(244, 245, 208); 
+// ---------- Modal ----------
+// Ogni modale mostra una "striscia" orizzontale (es. 2 pagine affiancate) dentro una finestra
+// grande come UNA pagina, e la striscia si scorre in orizzontale (swipe, trascinamento, rotella,
+// frecce). Se le pagine delle tue immagini non sono 16:9, cambia solo questo numero
+// (altezza / larghezza di una pagina: 9/16 = 0.5625, 3/4 = 0.75, 10/16 = 0.625...).
+$slide-page-h-per-w: 0.5625;
 
 .custom-modal-style {
-    background-color: rgb(15, 33, 37) !important; 
-    border: 1px solid rgba($brand-yellow, 0.2) !important; 
+    background-color: $bg !important;
+    border: 1px solid rgba($brand-yellow, 0.25) !important;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    position: relative; // Necessario per posizionare la X e le frecce
+    position: relative;
+    overflow: hidden;
 
     .modal-body {
-        overflow: hidden; // Evita che le frecce creino scroll strano
+        overflow: hidden;
+        // serve per misurare la larghezza della finestra con le unita' cqw
+        container-type: inline-size;
     }
 }
 
-// Contenitore per lo scorrimento dell'immagine lunga
 .horizontal-scroll-wrapper {
     display: flex;
+    align-items: stretch;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x proximity; // Effetto calamita sulle slide
-    scrollbar-width: none; // Nasconde barra su Firefox
-    
-    &::-webkit-scrollbar {
-        display: none; // Nasconde barra su Chrome/Safari
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: grab;
+
+    // Mobile: altezza fissa leggibile, la pagina si scopre scorrendo
+    height: clamp(260px, 62vh, 480px);
+
+    &::-webkit-scrollbar { display: none; }
+
+    // Trascinamento col mouse (aggiunto dallo script in fondo alla pagina)
+    &.is-dragging {
+        cursor: grabbing;
+        user-select: none;
+    }
+
+    // Desktop/tablet: la finestra ha la proporzione di UNA pagina
+    @include up($bp-md) {
+        height: 50vw; // fallback per browser senza unita' cqw
+        height: calc(100cqw * #{$slide-page-h-per-w});
+        max-height: 80vh;
     }
 }
 
 .modal-dialog.modal-xl {
-    max-width: 865px; // Questo numero definisce quanto è larga la tua "finestra"
-    margin: 1.75rem auto; // Centra il modal nello schermo
-    
-    @media (max-width: 992px) {
-        max-width: 90%; // Su tablet e mobile lo rendiamo responsivo
-    }
+    max-width: min(1200px, 94vw);
+    margin: 1.75rem auto;
+
+    @media (max-width: 992px) { max-width: 90%; }
 }
 
 .long-slide-img {
-    height: 70vh; // Altezza fissa
-    width: auto;  // La larghezza si espande in base alla foto
+    // L'immagine segue l'altezza della finestra e prende la larghezza che le serve:
+    // niente piu' tagli al centro e la striscia resta piu' larga della finestra, quindi scorribile.
+    // max-width: none e' fondamentale: in style.scss c'e' "img { max-width: 100% }"
+    // che la schiacciava alla larghezza della finestra, tagliandola al centro (object-fit: cover).
+    height: 100%;
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
     display: block;
-    flex-shrink: 0;
     object-fit: contain;
-    scroll-snap-align: start;
+    object-position: left center;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
-// La X fissa personalizzata
 .btn-close-custom {
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 9999;
-    background: rgba(15, 33, 37, 0.8);
+    background: rgba($bg, 0.8);
     border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $brand-yellow; 
+    color: $brand-yellow;
     border: none;
     cursor: pointer;
     transition: transform 0.2s ease;
 
-    &:hover {
-        transform: scale(1.2);
-    }
+    &:hover { transform: scale(1.2); }
 }
 
-// Frecce di navigazione
 .nav-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1050;
-    background: rgba(15, 33, 37, 0.4);
+    background: rgba($bg, 0.4);
     border: 2px solid $brand-yellow;
     color: $brand-yellow;
     border-radius: 50%;
@@ -325,193 +469,135 @@ $brand-yellow: rgb(244, 245, 208);
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    
-    &:hover {
-        background: $brand-yellow;
-        color: rgb(15, 33, 37);
-    }
+
+    &:hover { background: $brand-yellow; color: $bg; }
     &.prev { left: 20px; }
     &.next { right: 20px; }
 }
 
-// Effetto hover sulle icone della strada
-.step-icon {
-    transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.15); 
-        filter: brightness(1.2); 
+.nav-arrow {
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
     }
+
+    // Su touch si scorre con il dito: le frecce non servono
+    @media (hover: none) { display: none; }
 }
 
+// ---------- Mobile ----------
+@include down($bp-md) {
 
+    .project-hero{
+        .project-title{font-size: 73px;}
+        h2{font-size: 42px;}
+        p{ font-size: 16px;}
+    }
+    .info-cards,
+    .depth-grid { grid-template-columns: 1fr; }
 
+    .project-hero .project-title { margin-bottom: 1.5rem; }
+    .info-cards { gap: 0.8rem; }
+    .project-hero .info-card {
+        margin: 0;
+        padding: 0.9rem 1.1rem;
 
-@media(max-width: 768px){
-    .project-intro h1{
-        font-size: 44px;
+        h2 { margin-bottom: 0.3rem; }
+        p  { line-height: 1.45; margin: 0; }
+    }
+
+    .depth-grid .depth-item + .depth-item {
+        border-left: none;
+        border-top: 1px solid $teal;
+    }
+
+    .under-hood .carousel { padding: 1.6rem 2.6rem; }
+
+    #hood-title{ font-size: 73px;}
+    .hood-text{
+        // h2 { font-size: 73px; margin: 2rem 0; }
+        h3 { font-size: 24px; margin: 2rem 0; }
+        p  { font-size: 16px; margin-bottom: 1.5rem; }
+        .btn-site { margin: 10px 10px; padding: 10px 15px;}
+    }
+    .under-hood .hood-slide {
+        flex-direction: column-reverse;
+        gap: 1rem;
         text-align: center;
-        .lead {
-            font-size: 22px;
-            text-align: center;
-        }
-    }
-    .road-wrapper .journey-title{
-        font-size: 66px;
-        text-align: center;
-    }
-    .road-wrapper .journey-subtitle{
-        font-size: 22px;
-    }
-}
 
-//funfact card
-@media (max-width: 768px) {    
-.funfact-comments-buddy{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.choose-adventure{
-    font-size: 22px;
-}
-}
-
-@media (max-width: 768px) {
-.btn-proto{
-    &.desktop-link{
-        display: none;
+        .hood-visual { flex: none; }
     }
-    &.mobile-link{
-        display: inline-block;
+
+    .proto-jump{ .p{ font-size: 16px;}}
+
+    .btn-proto {
+        &.desktop-link { display: none; }
+        &.mobile-link { display: inline-block; }
+        p{ font-size: 16px;}
     }
-}
-}
-//mobile strada
 
+    .open-proto {
+        .desktop-link { display: none; }
+        .mobile-link { display: inline-block; }
+    }
 
-@media (max-width: 768px) {
+    // Strada come sfondo, step in colonna con zig-zag
+    
+    .journey-title{font-size: 73px !important;}
+    .journey-subtitle{font-size: 42px !important;}
+
     .road-container {
-        background-image: url(../img/sentiero-mobile.svg); // L'immagine più stretta
-        background-repeat: no-repeat; // Permette alla strada di allungarsi se hai molti step
-        background-size: cover;
-        background-position: top center;
-        width: 100%;       
-        min-height: auto;
         display: flex;
         flex-direction: column;
-        padding: 40px 10px 100px 10px;
-        overflow: hidden;
+        gap: 1rem;
+        padding: 0 0 2rem;
+        isolation: isolate;
 
-        .road-image{
-            display: none;
-        }
-    }
-}
-
-//card per step 
-
-@media (max-width: 768px) {
-    .road-step {
-        position: relative !important; // Sovrascrive i top/left del desktop
-        top: auto !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: fit-content;
-        max-width: 80%;
-        min-width: 200px;
-        margin: 10px auto; // Le incolonna perfettamente al centro
-        background: rgba(15, 33, 37, 0.9); // Sfondo card
-        border: 2px solid rgba(244, 245, 208, 0.3);
-        border-radius: 15px;
-        padding: 10px 10px;
-        display: flex;
-        flex-direction: row !important; // Mette numero e testo affiancati
-        align-items: center;
-    // Zig-Zag sicuro (non esce dallo schermo)
-        &:nth-child(even) {
-            margin-left: auto;
-            margin-right: 5%;
-        }
-        &:nth-child(odd) {
-            margin-right: auto;
-            margin-left: 5%;
-        }
-
-        .step-num {
-            display: none;
-        }
-
-        .step-description {
-            border-left: 1px solid rgba(244, 245, 208, 0.5);
-            h3 { font-size: 22px; }
-            p { font-size: 11px; }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .step-icon {
-        width: 50px !important; 
-        height: 50px !important;
-        flex-shrink: 0; // Impedisce alla card di "schiacciare" l'icona
-        padding-right: 5px;
-        
-        
-        img {
-            width: 100% !important; // Forza l'immagine a stare nei 30px
-            height: 100% !important;
+        .road-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+            opacity: 0.3;
+            z-index: 0;
         }
     }
-}
 
-@media (max-width: 768px) {
-    .open-proto {
-        position: relative !important;
-        top: 0 !important;   // Rimuove il top: 30px del desktop
-        left: 0 !important;  // Rimuove il left: -80px del desktop
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        a {
-            font-size: 24px; // Leggermente più piccolo per mobile per evitare che vada a capo
-            text-decoration: underline; // Opzionale: aiuta a capire che è un link
-        }
-        .desktop-link{
-            display: none;
-        }
-        .mobile-link{
-            display: inline-block !important;
+    .road-step {
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+            grid-column: auto;
+            grid-row: auto;
+            align-self: auto;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            width: 86%;
+            min-height: 0;
+            padding: 1rem 1rem;
+            background: rgba($bg, 0.92);
+            border: 1px solid rgba($cream, 0.35);
+            border-radius: 14px;
         }
 
-    }
-}
+        &:nth-of-type(odd)  { align-self: flex-start; }
+        &:nth-of-type(even) { align-self: flex-end; }
 
-//modal mobile
+        .step-num { display: none; }
 
-@media (max-width: 768px) {
-    // toglie le frecce su mobile
-    .nav-arrow {
-        display: none !important;
-    }
+        .step-content,
+        &:nth-of-type(even) .step-content { flex-direction: row; }
 
-    // regola il modal per non avere spazi vuoti giganti
-    .custom-modal-style {
-        margin: 5px;
-        border-radius: 15px;
-    }
+        .step-icon img { width: 52px; height: 52px; }
 
-    .long-slide-img {
-        height: 60vh !important; // Altezza ridotta per mobile
-        width: auto;
-    }
+        &:nth-of-type(odd) .step-description,
+        &:nth-of-type(even) .step-description {
+            border: none;
+            padding: 0;
+        }
 
-    .horizontal-scroll-wrapper {
-        // rende lo swipe fluido su iPhone e Android
-        -webkit-overflow-scrolling: touch; 
-        padding: 0;
+        .step-description h3 { font-size: 24px; }
+        .step-description p { font-size: 16px; }
     }
 }
