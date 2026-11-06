@@ -146,7 +146,7 @@
         .craft-text {
             position: absolute;
             inset: 0;
-            padding: 1rem 0.8rem;
+            padding: 1rem 0.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -433,7 +433,11 @@
             max-width: 270px;
             scroll-snap-align: center;
             margin: 0;
-
+            
+            .craft-title { 
+                margin-left: 10px;
+            }
+            
             .craft-text {
                 opacity: 0;
                 pointer-events: none;
@@ -563,7 +567,9 @@
 
 
     #footer-home {
-        margin-top: -30rem !important; 
+        position: relative;
+        z-index: 10;
+        margin-top: -40rem !important; 
         padding-bottom: 0;
     }
 
